@@ -11,8 +11,6 @@ Join the exclusive presale for the $POST token and be among the first to own a p
 - **Presale Period**: September 27, 2025 12:00 UTC → October 3, 2025 12:59 UTC
 - **Presale Address**: `addr1q84kuy4fm5pevp9mflwg924xxzw0evs4jlmevcarxzm49hletjemey8rlkeakj5ca4j2wamzm25fr3a0wyudgh3c4kmsprglkh`
 
-### Presale Timeline
-![Presale Timeline](../images/presale-timeline.png)
 
 ## 💰 Funding Goals
 
