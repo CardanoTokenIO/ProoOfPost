@@ -10,7 +10,7 @@ import { ProofOfPostClient } from '@proofofpost/sdk';
 
 const client = new ProofOfPostClient({
   baseUrl: 'https://api.proofofpost.io',
-  walletProvider: 'nami', // or 'eternl', 'lace', etc.
+  walletProvider: 'eternl', // or 'lace', 'vespr'
 });
 
 // Connect wallet and authenticate
@@ -437,14 +437,14 @@ export const WalletConnector: React.FC = () => {
     <div className="wallet-connector">
       {!connectedWallet ? (
         <div className="wallet-options">
-          <button onClick={() => connectWallet('nami')} disabled={isConnecting}>
-            Connect Nami
-          </button>
           <button onClick={() => connectWallet('eternl')} disabled={isConnecting}>
             Connect Eternl
           </button>
           <button onClick={() => connectWallet('lace')} disabled={isConnecting}>
             Connect Lace
+          </button>
+          <button onClick={() => connectWallet('vespr')} disabled={isConnecting}>
+            Connect Vespr
           </button>
         </div>
       ) : (

@@ -5,7 +5,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 ## 🔐 Wallet-Based Authentication
 
 ### Multi-Wallet Support
-- **Nami, Eternl, Lace, Flint, Vespr** - Connect with your preferred Cardano wallet
+- **Eternl, Lace, Vespr** - Connect with your preferred Cardano wallet
 - **CIP-30 standard** compliance for seamless integration
 - **Signature-based authentication** using CIP-8 message signing
 - **Session management** with secure JWT tokens

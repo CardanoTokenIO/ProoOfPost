@@ -5,12 +5,10 @@ Proof of Post's wallet integration is the foundation that enables true decentral
 ## 🔗 Supported Wallets
 
 ### CIP-30 Compatible Wallets
-Proof of Post supports all major Cardano wallets that implement the CIP-30 standard:
+Proof of Post supports these major Cardano wallets that implement the CIP-30 standard:
 
-- **[Nami](https://namiwallet.io/)** - Popular browser extension wallet
 - **[Eternl](https://eternl.io/)** - Feature-rich wallet with advanced capabilities
 - **[Lace](https://www.lace.io/)** - IOG's official light wallet
-- **[Flint](https://flint-wallet.com/)** - Multi-platform wallet solution
 - **[Vespr](https://vespr.xyz/)** - Community-focused wallet
 
 ### Browser Extension Detection

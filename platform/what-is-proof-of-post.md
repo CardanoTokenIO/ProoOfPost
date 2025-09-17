@@ -58,7 +58,7 @@ What sets Proof of Post apart from traditional social media:
 
 To join Proof of Post, you simply need:
 
-1. **A Cardano Wallet** (Nami, Eternl, Lace, Flint, or Vespr)
+1. **A Cardano Wallet** (Eternl, Lace, or Vespr)
 2. **Some ADA** for transactions and tips
 3. **An ADA Handle** (optional, but recommended for verified identity)
 

@@ -5,10 +5,8 @@ Complete guide to connecting and managing your Cardano wallet on Proof of Post, 
 ## 🔗 Supported Wallets
 
 ### Browser Extension Wallets
-- **[Nami](https://namiwallet.io/)** - Most popular, user-friendly interface
 - **[Eternl](https://eternl.io/)** - Advanced features, hardware wallet support
 - **[Lace](https://www.lace.io/)** - IOG's official wallet, modern design
-- **[Flint](https://flint-wallet.com/)** - Multi-platform compatibility
 - **[Vespr](https://vespr.xyz/)** - Community-focused features
 
 ### Connection Process

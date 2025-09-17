@@ -6,7 +6,7 @@ Welcome to Proof of Post! This guide will walk you through everything you need t
 
 ### What You'll Need
 Before getting started, make sure you have:
-- **A Cardano Wallet** (Nami, Eternl, Lace, Flint, or Vespr)
+- **A Cardano Wallet** (Eternl, Lace, or Vespr)
 - **Some ADA** for transactions and tips (minimum 5 ADA recommended)
 - **An ADA Handle** (optional, but recommended for verified identity)
 
@@ -23,10 +23,8 @@ Before getting started, make sure you have:
 
 #### 1. Choose Your Wallet
 Click the "Connect Wallet" button and select from available options:
-- **Nami** - Most popular browser extension wallet
 - **Eternl** - Feature-rich with advanced capabilities
 - **Lace** - IOG's official light wallet
-- **Flint** - Multi-platform solution
 - **Vespr** - Community-focused wallet
 
 #### 2. Grant Permissions
