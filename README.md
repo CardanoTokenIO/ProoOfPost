@@ -5,4 +5,16 @@
   </div>
 </div>
 
-Proof of Post is my magnum opus: the epitome of on-chain social media, a Cardano native platform where every post lives on a truly decentralized network.
+## Welcome to Proof of Post
+
+**Proof of Post** is a revolutionary **Cardano-native social media platform** - the world's first truly decentralized Twitter-like experience built specifically for the Cardano ecosystem. 
+
+### What Makes Proof of Post Special?
+
+- **🔐 Wallet-Based Authentication** - Connect with your Cardano wallet instead of traditional login
+- **💎 Cryptographic Verification** - Every post is cryptographically signed and verifiable on-chain
+- **💰 Built-in Monetization** - Tip creators in ADA, create paid content, and participate in a token economy
+- **🏷️ ADA Handle Integration** - Use your on-chain ADA handle as your verified social identity
+- **🌐 Fully Decentralized** - Content stored on IPFS, identities on Cardano, no central authority
+
+Proof of Post combines the familiar social media experience you love with the security, ownership, and financial opportunities of the Cardano blockchain. It's not just social media - it's the future of decentralized social interaction.
