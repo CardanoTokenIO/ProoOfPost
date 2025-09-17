@@ -11,42 +11,54 @@ Join the exclusive presale for the $POST token and be among the first to own a p
 - **Presale Period**: September 27, 2025 12:00 UTC → October 3, 2025 12:59 UTC
 - **Presale Address**: `addr1q84kuy4fm5pevp9mflwg924xxzw0evs4jlmevcarxzm49hletjemey8rlkeakj5ca4j2wamzm25fr3a0wyudgh3c4kmsprglkh`
 
+### Presale Timeline
+![Presale Timeline](../images/presale-timeline.png)
+
 ## 💰 Funding Goals
 
 - **Soft Cap**: 20,000 ADA *(Full refunds if not met)*
 - **Hard Cap**: 195,000 ADA *(Presale ends when reached)*
 - **Security Guarantee**: Presale backed and secured by Orca Labs
 
-### Tiered Pricing Structure
+## 📊 Tiered Pricing Structure
 
 The presale features a multi-tier pricing system with decreasing token allocation rates as funding increases:
 
-#### Tier 0 (Allowlist)
+![Presale Tier Structure](../images/presale-tier-structure.png)
+
+### Tier Breakdown
+
+#### Tier 0 (Allowlist) - **Best Value** 🎯
 - **Rate**: 3,600 tokens per ADA
 - **Allocation**: 3,000 ADA capacity
 - **Total Tokens**: 10,800,000 $POST
 
-#### Tier 1 
+#### Tier 1 - **High Value** ⭐
 - **Rate**: 3,200 tokens per ADA
 - **Allocation**: 7,000 ADA capacity
 - **Total Tokens**: 22,400,000 $POST
 
-#### Tier 2
+#### Tier 2 - **Good Value** 💎
 - **Rate**: 3,000 tokens per ADA  
 - **Allocation**: 10,000 ADA capacity
 - **Total Tokens**: 30,000,000 $POST
 
-#### Tier 3
+#### Tier 3 - **Standard** 🔥
 - **Rate**: 2,800 tokens per ADA
 - **Allocation**: 42,000 ADA capacity
 - **Total Tokens**: 117,600,000 $POST
 
-#### Tier 4 (Final)
+#### Tier 4 (Final) - **Last Chance** ⚡
 - **Rate**: 2,400 tokens per ADA
 - **Allocation**: 133,000 ADA capacity  
 - **Total Tokens**: 319,200,000 $POST
 
+### Cumulative Progress
+![Presale Cumulative Progress](../images/presale-cumulative-progress.png)
+
 ### Token Distribution
+
+![Token Distribution](../images/presale-token-distribution.png)
 
 - **Presale**: 50% (500,000,000 tokens)
 - **Liquidity Pool**: 20% (200,000,000 tokens)
@@ -60,15 +72,19 @@ The presale features a multi-tier pricing system with decreasing token allocatio
 - **Profit Potential**: Up to +50% profit from Tier 0 rates at launch
 - **CEX Funding**: 5% of total supply reserved for exchange listings
 
-## 📈 Profit Calculation
+## 📈 Profit Potential Analysis
+
+![Profit Potential](../images/presale-profit-potential.png)
 
 Based on current tier rates vs launch price (2,300 tokens/ADA):
 
-- **Tier 0 (3,600/ADA)**: +56.5% profit at launch
-- **Tier 1 (3,200/ADA)**: +39.1% profit at launch  
-- **Tier 2 (3,000/ADA)**: +30.4% profit at launch
-- **Tier 3 (2,800/ADA)**: +21.7% profit at launch
-- **Tier 4 (2,400/ADA)**: +4.3% profit at launch
+- **Tier 0 (3,600/ADA)**: +56.5% profit at launch 🎯
+- **Tier 1 (3,200/ADA)**: +39.1% profit at launch ⭐
+- **Tier 2 (3,000/ADA)**: +30.4% profit at launch 💎
+- **Tier 3 (2,800/ADA)**: +21.7% profit at launch 🔥
+- **Tier 4 (2,400/ADA)**: +4.3% profit at launch ⚡
+
+> **Note**: Earlier tiers offer significantly higher profit potential due to better token rates compared to the launch price.
 
 ## 🔗 How to Participate
 
