@@ -26,27 +26,27 @@ The presale features a multi-tier pricing system with decreasing token allocatio
 
 ### Tier Breakdown
 
-#### Tier 0 (Allowlist) - **Best Value** 🎯
+#### Tier 0 (Allowlist) - **Best Value**
 - **Rate**: 3,600 tokens per ADA
 - **Allocation**: 3,000 ADA capacity
 - **Total Tokens**: 10,800,000 $POST
 
-#### Tier 1 - **High Value** ⭐
+#### Tier 1 - **High Value**
 - **Rate**: 3,200 tokens per ADA
 - **Allocation**: 7,000 ADA capacity
 - **Total Tokens**: 22,400,000 $POST
 
-#### Tier 2 - **Good Value** 💎
+#### Tier 2 - **Good Value**
 - **Rate**: 3,000 tokens per ADA  
 - **Allocation**: 10,000 ADA capacity
 - **Total Tokens**: 30,000,000 $POST
 
-#### Tier 3 - **Standard** 🔥
+#### Tier 3 - **Standard Rate**
 - **Rate**: 2,800 tokens per ADA
 - **Allocation**: 42,000 ADA capacity
 - **Total Tokens**: 117,600,000 $POST
 
-#### Tier 4 (Final) - **Last Chance** ⚡
+#### Tier 4 (Final) - **Last Opportunity**
 - **Rate**: 2,400 tokens per ADA
 - **Allocation**: 133,000 ADA capacity  
 - **Total Tokens**: 319,200,000 $POST
@@ -55,8 +55,6 @@ The presale features a multi-tier pricing system with decreasing token allocatio
 ![Presale Cumulative Progress](../images/presale-cumulative-progress.png)
 
 ### Token Distribution
-
-![Token Distribution](../images/presale-token-distribution.png)
 
 - **Presale**: 50% (500,000,000 tokens)
 - **Liquidity Pool**: 20% (200,000,000 tokens)
@@ -76,11 +74,11 @@ The presale features a multi-tier pricing system with decreasing token allocatio
 
 Based on current tier rates vs launch price (2,300 tokens/ADA):
 
-- **Tier 0 (3,600/ADA)**: +56.5% profit at launch 🎯
-- **Tier 1 (3,200/ADA)**: +39.1% profit at launch ⭐
-- **Tier 2 (3,000/ADA)**: +30.4% profit at launch 💎
-- **Tier 3 (2,800/ADA)**: +21.7% profit at launch 🔥
-- **Tier 4 (2,400/ADA)**: +4.3% profit at launch ⚡
+- **Tier 0 (3,600/ADA)**: +56.5% profit at launch
+- **Tier 1 (3,200/ADA)**: +39.1% profit at launch
+- **Tier 2 (3,000/ADA)**: +30.4% profit at launch
+- **Tier 3 (2,800/ADA)**: +21.7% profit at launch
+- **Tier 4 (2,400/ADA)**: +4.3% profit at launch
 
 > **Note**: Earlier tiers offer significantly higher profit potential due to better token rates compared to the launch price.
 
