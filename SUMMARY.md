@@ -30,8 +30,6 @@
 
 ## Platform Features
 
-* [The Casino](getting-started/the-casino.md)
-* [The Arena](getting-started/the-arena.md)
 * [The $POST Token](getting-started/the-post-token.md)
 * [Presale](getting-started/presale.md)
 
