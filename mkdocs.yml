@@ -4,7 +4,7 @@ site_url: https://CardanoTokenIO.github.io/ProoOfPost/
 theme:
   name: material
   logo: images/utxo-maestro-logo.jpg
-  favicon: images/utxo-maestro-logo.jpg
+  favicon: images/utxo-maestro-logo.jpg?v=2
   palette:
     # Palette toggle for light mode
     - scheme: default
