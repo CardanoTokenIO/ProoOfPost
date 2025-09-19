@@ -67,8 +67,6 @@ nav:
     - Monetizing Content: user-guide/monetizing-content.md
   - Developer Resources:
     - API Documentation: developers/api-documentation.md
-    - Database Schema: developers/database-schema.md
-    - Integration Guide: developers/integration-guide.md
   - Community:
     - Social Links: social/links.md
 

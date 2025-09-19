@@ -2,7 +2,7 @@
 
 Complete guide to connecting and managing your Cardano wallet on Proof of Post, including troubleshooting and advanced features.
 
-## üîó Supported Wallets
+## Supported Wallets
 
 ### Browser Extension Wallets
 - **[Eternl](https://eternl.io/)** - Advanced features, hardware wallet support
@@ -17,7 +17,7 @@ Complete guide to connecting and managing your Cardano wallet on Proof of Post, 
 5. **Grant permissions** when prompted
 6. **Sign authentication message** to verify ownership
 
-## üõ°Ô∏è Security Features
+## Security Features
 
 ### Authentication Process
 - **Challenge-response system**: Prevents replay attacks
@@ -31,7 +31,7 @@ Complete guide to connecting and managing your Cardano wallet on Proof of Post, 
 - **Keep wallets updated**: Use latest wallet versions for security
 - **Use hardware wallets**: For maximum security with supported wallets
 
-## üí∞ Wallet Features
+## Wallet Features
 
 ### Balance & Assets
 - **ADA balance**: Real-time balance display
@@ -45,7 +45,7 @@ Complete guide to connecting and managing your Cardano wallet on Proof of Post, 
 - **Transaction history**: View all platform-related transactions
 - **Gas fee estimation**: See transaction costs before signing
 
-## üîß Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 - **Wallet not detected**: Ensure extension is installed and enabled

@@ -2,7 +2,7 @@
 
 Proof of Post seamlessly integrates Cardano's rich token ecosystem, making it easy to discover, discuss, and interact with tokens directly within the social media experience.
 
-## üîç Token Discovery
+## Token Discovery
 
 ### Comprehensive Token Database
 The platform maintains an extensive database of Cardano tokens with:
@@ -20,7 +20,7 @@ The platform maintains an extensive database of Cardano tokens with:
 - **Category Filtering**: Browse by token type (utility, meme, governance)
 - **Watchlist**: Follow your favorite tokens for updates
 
-## üìä Token Profiles
+## Token Profiles
 
 ### Comprehensive Token Pages
 Each token gets a dedicated profile page featuring:
@@ -45,7 +45,7 @@ Each token gets a dedicated profile page featuring:
 - **Official Links**: Website, Twitter, Discord, Telegram
 - **Holder Analysis**: Top holders and distribution charts
 
-## üí¨ Token Mentions
+## Token Mentions
 
 ### Automatic Token Linking
 When users mention tokens in posts using the `$TOKEN` format:
@@ -61,7 +61,7 @@ When users mention tokens in posts using the `$TOKEN` format:
 - **Influential Mentions**: Posts from verified or high-reputation users
 - **Mention History**: Historical mention trends and patterns
 
-## üìà Price Integration
+## Price Integration
 
 ### Real-time Price Data
 - **DexHunter API Integration**: Reliable price feeds from Cardano DEXs
@@ -77,7 +77,7 @@ When users mention tokens in posts using the `$TOKEN` format:
 - **Watchlist Prices**: Monitor prices of followed tokens
 - **Price Notifications**: Alerts for significant price changes
 
-## üí∞ Token Interactions
+## Token Interactions
 
 ### Tipping System
 - **Multi-Token Tipping**: Tip creators with any supported token
@@ -93,7 +93,7 @@ When users mention tokens in posts using the `$TOKEN` format:
 - **Liquidity Information**: Pool depth and trading fees
 - **Trade History**: Track your trading activity
 
-## üéØ Token Communities
+## Token Communities
 
 ### Community Features
 - **Token-Specific Feeds**: Dedicated feeds for each token's mentions
@@ -109,7 +109,7 @@ When users mention tokens in posts using the `$TOKEN` format:
 - **AMA Sessions**: Ask Me Anything with project founders
 - **Community Challenges**: Engagement campaigns and contests
 
-## üì± Watchlist & Portfolio
+## Watchlist & Portfolio
 
 ### Personal Watchlist
 - **Token Following**: Follow tokens for updates and news
@@ -125,7 +125,7 @@ When users mention tokens in posts using the `$TOKEN` format:
 - **Performance History**: Track portfolio performance over time
 - **Tax Reporting**: Export data for tax calculations
 
-## üîî Token Alerts
+## Token Alerts
 
 ### Price Alerts
 - **Price Targets**: Notify when tokens reach specific prices
@@ -141,7 +141,7 @@ When users mention tokens in posts using the `$TOKEN` format:
 - **Project Updates**: Official announcements from project teams
 - **Regulatory News**: Important regulatory developments
 
-## üõ†Ô∏è Developer Tools
+## Developer Tools
 
 ### Token API
 ```typescript
@@ -168,7 +168,7 @@ await fetch('/api/tokens/watch', {
 - **Metadata API**: Token information and imagery
 - **Social Metrics**: Mention counts and sentiment data
 
-## üé® Visual Integration
+## Visual Integration
 
 ### Token Branding
 - **Token Logos**: High-quality logos throughout the platform

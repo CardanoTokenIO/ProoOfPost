@@ -2,7 +2,7 @@
 
 Proof of Post is built on a modern, scalable architecture that seamlessly integrates traditional web technologies with Cardano blockchain capabilities. Here's how the platform is constructed:
 
-## üèóÔ∏è Core Technology Stack
+## Core Technology Stack
 
 ### Frontend Architecture
 - **Next.js 14** with App Router for modern React development
@@ -23,7 +23,7 @@ Proof of Post is built on a modern, scalable architecture that seamlessly integr
 - **Blockfrost API** for Cardano network data
 - **CIP-8 Message Signing** for cryptographic verification
 
-## üîß Performance Optimizations
+## Performance Optimizations
 
 ### Virtualized Rendering
 ```typescript
@@ -48,7 +48,7 @@ Proof of Post is built on a modern, scalable architecture that seamlessly integr
 - **Token data caching** with 10-minute TTL
 - **Image caching** through IPFS gateways
 
-## üóÑÔ∏è Database Architecture
+## Database Architecture
 
 ### Core Tables Schema
 
@@ -88,7 +88,7 @@ tokens (id, policy_id, asset_name, ticker, metadata)
 - **Full-text search** on post content and user profiles
 - **Time-based partitioning** for scalability
 
-## üîê Authentication Flow
+## Authentication Flow
 
 ### Wallet Connection Process
 
@@ -119,7 +119,7 @@ sequenceDiagram
 - **Session expiry** with automatic refresh
 - **Multi-device support** with session tracking
 
-## üì° API Architecture
+## API Architecture
 
 ### RESTful Endpoints
 ```typescript
@@ -158,7 +158,7 @@ GET  /api/payments/history // Get payment history
 - **CORS configuration** for secure cross-origin requests
 - **Input validation** with Zod schemas
 
-## üåê Blockchain Integration
+## Blockchain Integration
 
 ### Cardano Network Interaction
 
@@ -189,7 +189,7 @@ const txHash = await signedTx.submit();
 - **Handle verification** against on-chain data
 - **Profile URL routing** with handle support
 
-## üìÅ File Storage & IPFS
+## File Storage & IPFS
 
 ### Decentralized Media Storage
 
@@ -215,7 +215,7 @@ const uploadToIPFS = async (file: File) => {
 - **Watermarking** for paid content
 - **Signed URLs** for secure access
 
-## üöÄ Deployment & Scaling
+## Deployment & Scaling
 
 ### Production Architecture
 ```yaml
@@ -243,7 +243,7 @@ CMD ["npm", "start"]
 - **Load balancing** for high availability
 - **Horizontal scaling** with container orchestration
 
-## üîç Monitoring & Analytics
+## Monitoring & Analytics
 
 ### Performance Monitoring
 - **Core Web Vitals** tracking

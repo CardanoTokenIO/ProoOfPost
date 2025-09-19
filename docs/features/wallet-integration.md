@@ -2,7 +2,7 @@
 
 Proof of Post's wallet integration is the foundation that enables true decentralized social media. Instead of traditional username/password systems, the platform uses Cardano wallets for authentication, identity, and payments.
 
-## Ÿ”— Supported Wallets
+## Supported Wallets
 
 ### CIP-30 Compatible Wallets
 Proof of Post supports these major Cardano wallets that implement the CIP-30 standard:
@@ -20,7 +20,7 @@ const availableWallets = Object.keys(window.cardano || {})
   .filter(key => window.cardano[key]?.isEnabled !== undefined);
 ```
 
-## Ÿ” Authentication Process
+## Authentication Process
 
 ### Wallet Connection Flow
 
@@ -40,7 +40,7 @@ const availableWallets = Object.keys(window.cardano || {})
 - **Automatic Expiry**: Sessions expire for security
 - **Multi-Device Support**: Connect the same wallet on multiple devices
 
-## Ÿ‘¤ Identity Management
+## Identity Management
 
 ### Dual Identity System
 
@@ -63,7 +63,7 @@ Your wallet connection automatically populates:
 - **Asset Holdings**: All tokens in your wallet
 - **ADA Handle**: If you own one, it's automatically verified
 
-## Ÿ’° Financial Integration
+## Financial Integration
 
 ### Balance Display
 - **Real-time ADA balance** shown in your profile
@@ -83,7 +83,7 @@ Your wallet connection automatically populates:
 - **Token Tipping**: Tip creators with any supported token
 - **Asset Metadata**: Automatic token information lookup
 
-## Ÿ›¡ï¸ Security & Privacy
+## Security & Privacy
 
 ### Cryptographic Security
 - **CIP-8 Message Signing**: Industry standard for wallet authentication
@@ -103,7 +103,7 @@ Your wallet connection automatically populates:
 - **Authenticity Proof**: Immutable proof of post authorship
 - **Anti-Impersonation**: Prevent fake posts attributed to your wallet
 
-## Ÿ”„ Session Management
+## Session Management
 
 ### Persistent Sessions
 - **Auto-Reconnection**: Automatic wallet reconnection when available
@@ -117,7 +117,7 @@ Your wallet connection automatically populates:
 - **Refresh Tokens**: Seamless session renewal
 - **Device Management**: See all connected devices
 
-## Ÿ”§ Technical Implementation
+## Technical Implementation
 
 ### CIP-30 Integration
 ```typescript
@@ -162,7 +162,7 @@ const connectWallet = async (walletName: string) => {
 - **User Cancellation**: Proper handling when users cancel operations
 - **Wallet Not Found**: Clear messaging for missing wallets
 
-## Ÿš€ Advanced Features
+## Advanced Features
 
 ### Wallet Switching
 - **Multi-Wallet Support**: Switch between different connected wallets

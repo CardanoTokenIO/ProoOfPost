@@ -1,153 +1,81 @@
 # Social Media Features
 
-Proof of Post provides a comprehensive social media experience that rivals traditional platforms while adding the benefits of blockchain integration. Here's everything you can do:
+Proof of Post delivers a familiar yet enhanced social media experience, combining traditional features with blockchain-powered innovations.
 
-## üìù Content Creation
+## Content Creation
 
-### Rich Post Composer
-The platform features a sophisticated composer that supports multiple content types:
+### Post Types
+- **Text Posts** - Share thoughts, updates, and insights
+- **Media Posts** - Upload images and videos to IPFS
+- **Poll Posts** - Create community polls with blockchain voting
+- **Thread Posts** - Long-form content split across connected posts
+- **Quote Posts** - Share others' content with your commentary
 
-- **Text Posts** with 280 character limit (like Twitter)
-- **Rich formatting** with automatic URL, mention, and hashtag detection
-- **Character counter** with visual feedback as you approach the limit
-- **Auto-suggestions** for tokens, users, and hashtags as you type
+### Rich Text Features
+- **Markdown Support** for formatted text
+- **Hashtag Integration** with automatic linking
+- **User Mentions** with notification system
+- **Token Mentions** with automatic price data
+- **URL Preview** with metadata extraction
 
-### Media Support
-- **Image Uploads**: JPEG, PNG, WebP with automatic IPFS storage
-- **GIF Integration**: Built-in Giphy picker for animated content
-- **Video Support**: Short video clips with preview thumbnails
-- **Multiple Media**: Attach up to 4 images per post
+### Media Handling
+- **IPFS Storage** for decentralized media hosting
+- **Multiple Formats** - Images, videos, GIFs, documents
+- **Automatic Compression** for optimal loading
+- **Alt Text Support** for accessibility
+- **Media Galleries** for multiple files per post
 
-### Content Enhancement
-- **Hashtag Support**: Use `#topic` to categorize and make content discoverable
-- **Token Mentions**: Reference `$TOKEN` to automatically link to token pages
-- **User Mentions**: Tag `@username` or `$handle` to notify other users
-- **URL Embedding**: Automatic preview generation for shared links
+## Discovery & Navigation
 
-## üí¨ Social Interactions
+### Feed Algorithm
+- **Chronological Feed** - See posts in time order
+- **Algorithmic Feed** - Personalized content recommendations
+- **Following Feed** - Posts from accounts you follow
+- **Topic Feeds** - Content filtered by hashtags
+- **Token Feeds** - Posts mentioning specific tokens
 
-### Reaction System
-Express yourself with multiple reaction types:
-- **‚ù§Ô∏è Like**: Show appreciation for content
-- **üöÄ Rocket**: Indicate excitement or bullish sentiment
-- **üíé Diamond**: Mark high-quality or valuable content
-- **ü§° Degen**: Playful reaction for risky or meme content
+### Search & Filtering
+- **Universal Search** across posts, users, and tokens
+- **Advanced Filters** by date, engagement, token mentions
+- **Trending Topics** based on community activity
+- **User Discovery** through mutual connections
+- **Content Categories** for organized browsing
 
-### Engagement Features
-- **Boost/Retweet**: Share content with your followers
-  - Simple boost without commentary
-  - Quote boost with your own comment
-  - Boost counter shows total shares
-- **Comments & Replies**: Threaded conversations on any post
-- **Bookmarks**: Save posts for later reading
-- **Share**: Generate links to share posts outside the platform
+### Navigation Features
+- **Infinite Scroll** with virtualized rendering
+- **Bookmark System** to save posts for later
+- **Reading Lists** for curated content collections
+- **History Tracking** of viewed content
+- **Quick Actions** for common interactions
 
-### Social Graph
-- **Follow System**: Build your network by following interesting users
-- **Follower/Following Lists**: See who's connected to any user
-- **Mutual Connections**: Discover users through your network
-- **Profile Badges**: Verification indicators for notable accounts
+## Content Analytics
 
-## üîç Discovery & Navigation
+### Engagement Metrics
+- **View Counts** for post reach
+- **Interaction Rates** across different reaction types
+- **Share Analytics** tracking boosts and quotes
+- **Comment Engagement** and reply threads
+- **Time-based Analytics** showing peak engagement periods
 
-### Feed Experience
-- **Home Feed**: Personalized timeline from users you follow
-- **Chronological Order**: Latest posts appear first
-- **Infinite Scroll**: Smooth loading of older content
-- **60fps Performance**: Virtualized rendering for smooth scrolling
-- **Real-time Updates**: New posts appear automatically
+### Audience Insights
+- **Follower Demographics** and activity patterns
+- **Content Performance** by type and topic
+- **Engagement Trends** over time
+- **Token Holder Analysis** for targeted content
+- **Geographic Distribution** of audience
 
-### Search Capabilities
-Comprehensive search across all platform content:
+## Notifications
 
-#### Post Search
-- **Full-text search** across all post content
-- **Hashtag filtering** to find topic-specific discussions
-- **Date range filtering** for temporal searches
-- **Media filtering** to find posts with images/videos
+### Real-time Updates
+- **Instant Notifications** for interactions
+- **Push Notifications** for mobile users
+- **Email Digests** for important updates
+- **Custom Notification Settings** per interaction type
+- **Notification Grouping** to reduce spam
 
-#### User Discovery
-- **Username search** with partial matching
-- **ADA handle lookup** for verified accounts
-- **Wallet address search** for direct user finding
-- **Bio keyword search** to find users by interests
-
-#### Token Integration
-- **Token ticker search** (e.g., "ADA", "DJED")
-- **Token name search** for full project names
-- **Policy ID lookup** for specific asset identification
-- **Token mention tracking** in posts
-
-### Topic Organization
-- **Trending Topics**: Real-time hashtag popularity
-- **Topic Pages**: Dedicated feeds for specific hashtags
-- **Topic Following**: Subscribe to hashtag-based feeds
-- **Hot Topics Widget**: Discover what's trending now
-
-## üìä Content Analytics
-
-### Post Performance
-- **Reaction Counts**: See total engagement for each reaction type
-- **Boost Analytics**: Track how many times content was shared
-- **Comment Metrics**: Monitor discussion generation
-- **Reach Estimates**: Understand content visibility
-
-### User Insights
-- **Profile Views**: See who's checking out your profile
-- **Follower Growth**: Track your audience expansion
-- **Top Posts**: Identify your most successful content
-- **Engagement Rate**: Measure audience interaction levels
-
-## üé® Customization Options
-
-### Display Preferences
-- **Dark/Light Mode**: Choose your preferred theme
-- **Compact View**: Information-dense display option
-- **Font Size**: Adjust text size for readability
-- **Animation Settings**: Control motion preferences
-
-### Feed Customization
-- **Algorithmic vs Chronological**: Choose your feed ordering
-- **Content Filtering**: Hide specific types of content
-- **Language Preferences**: Filter by post language
-- **Quality Filters**: Hide low-engagement content
-
-## üîî Notifications
-
-### Real-time Alerts
-- **Mentions**: When someone tags you in a post or comment
-- **Reactions**: When users interact with your content
-- **Followers**: When new users follow you
-- **Boosts**: When your content gets shared
-- **Comments**: When someone replies to your posts
-
-### Notification Management
-- **Push Notifications**: Browser/mobile alerts
-- **Email Digests**: Weekly summaries of activity
-- **In-app Notifications**: Real-time activity feed
-- **Granular Controls**: Choose what alerts you receive
-
-## üí° Advanced Features
-
-### Thread Creation
-- **Reply Chains**: Create long-form content through connected posts
-- **Thread Indicators**: Visual connections between related posts
-- **Thread Navigation**: Easy browsing of conversation flows
-
-### Content Moderation
-- **Community Guidelines**: Clear rules for acceptable content
-- **Reporting System**: Flag inappropriate content or behavior
-- **Blocking**: Prevent specific users from interacting with you
-- **Muting**: Hide content from users without blocking
-
-### Accessibility
-- **Screen Reader Support**: Full ARIA compliance
-- **Keyboard Navigation**: Complete interface control via keyboard
-- **High Contrast Mode**: Enhanced visibility options
-- **Alt Text Support**: Image descriptions for accessibility
-
----
-
-These social features create a familiar yet enhanced experience that leverages blockchain technology to provide true content ownership and direct creator monetization.
-
-Next: Learn about [Wallet Integration](wallet-integration.md) to understand how Cardano wallets power the platform.
+### Notification Types
+- **Reactions** on your posts
+- **New Followers** and follow requests
+- **Mentions** in posts and comments
+- **Tips Received** with transaction details
+- **Content Purchases** for paid posts

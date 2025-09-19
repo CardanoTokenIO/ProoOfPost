@@ -2,7 +2,7 @@
 
 Welcome to Proof of Post! This guide will walk you through everything you need to know to start using the platform, from connecting your wallet to creating your first post.
 
-## üöÄ Quick Start
+## Quick Start
 
 ### What You'll Need
 Before getting started, make sure you have:
@@ -17,7 +17,7 @@ Before getting started, make sure you have:
 4. **Complete Profile** - Add username, bio, and profile picture
 5. **Start Posting** - Create your first post and join the community!
 
-## üîó Connecting Your Wallet
+## Connecting Your Wallet
 
 ### Step-by-Step Wallet Connection
 
@@ -64,7 +64,7 @@ Your wallet will ask for permission to:
 - Try disconnecting and reconnecting your wallet
 - Contact support if problems continue
 
-## üë§ Setting Up Your Profile
+## Setting Up Your Profile
 
 ### Profile Information
 After connecting your wallet, complete your profile:
@@ -104,7 +104,7 @@ If you own an ADA handle:
 - Builds trust with other users
 - Required for some advanced features
 
-## üìù Creating Your First Post
+## Creating Your First Post
 
 ### Using the Post Composer
 
@@ -152,7 +152,7 @@ If you own an ADA handle:
 - **Use alt text** - Describe images for accessibility
 - **Consider monetization** - High-quality content can be monetized
 
-## üîç Discovering Content
+## Discovering Content
 
 ### Exploring the Platform
 
@@ -174,7 +174,7 @@ If you own an ADA handle:
 - **Keyboard shortcuts** - Use keyboard for faster navigation
 - **Mobile optimization** - Full feature parity on mobile devices
 
-## üí° Pro Tips
+## Pro Tips
 
 ### Getting More Engagement
 - **Post regularly** - Consistent posting builds audience
@@ -197,7 +197,7 @@ If you own an ADA handle:
 - **Keep software updated** - Update your wallet and browser regularly
 - **Be cautious with links** - Verify external links before clicking
 
-## üéØ Next Steps
+## Next Steps
 
 Now that you're set up, explore these features:
 

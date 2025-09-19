@@ -2,7 +2,7 @@
 
 Master the art of content creation on Proof of Post with this comprehensive guide covering everything from basic posts to advanced monetization strategies.
 
-## üìù Content Types
+## Content Types
 
 ### Text Posts
 - **Character limit**: 280 characters (like Twitter)
@@ -21,7 +21,7 @@ Master the art of content creation on Proof of Post with this comprehensive guid
 - **Threads**: Connect multiple posts for long-form content
 - **Live updates**: Real-time posting during events
 
-## üé® Advanced Composer Features
+## Advanced Composer Features
 
 ### Auto-Suggestions
 The composer provides intelligent suggestions as you type:
@@ -35,7 +35,7 @@ The composer provides intelligent suggestions as you type:
 - **Media optimization**: Images are automatically optimized for web
 - **Accessibility**: Alt text support for images
 
-## üí∞ Monetization Options
+## Monetization Options
 
 ### Paid Media
 Transform your visual content into revenue:
@@ -51,7 +51,7 @@ Transform your visual content into revenue:
 - **Entertainment**: 1-10 ADA for memes and casual content
 - **Exclusive access**: 20+ ADA for behind-the-scenes content
 
-## üìä Content Analytics
+## Content Analytics
 
 ### Post Performance Metrics
 - **Views**: Number of times your post was seen
@@ -66,7 +66,7 @@ Transform your visual content into revenue:
 - **Best performing content**: Identify what resonates with your audience
 - **Optimal posting times**: When your audience is most active
 
-## üéØ Content Strategy
+## Content Strategy
 
 ### Building Your Brand
 - **Consistent voice**: Develop a recognizable posting style
