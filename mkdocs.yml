@@ -5,6 +5,21 @@ theme:
   name: material
   logo: images/utxo-maestro-logo.jpg
   favicon: images/TokenLogo.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.top
     - navigation.sections
@@ -12,6 +27,7 @@ theme:
     - search.suggest
     - search.highlight
     - navigation.expand
+    - palette.toggle
 
 # Use docs directory to avoid conflicts
 docs_dir: docs
