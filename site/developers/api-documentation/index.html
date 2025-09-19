@@ -1,0 +1,2136 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CardanoTokenIO.github.io/ProoOfPost/developers/api-documentation/">
+      
+      
+        <link rel="prev" href="../../user-guide/monetizing-content/">
+      
+      
+        <link rel="next" href="../database-schema/">
+      
+      
+      <link rel="icon" href="../../images/TokenLogo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>API Documentation - Proof of Post Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Proof of Post Docs" class="md-header__button md-logo" aria-label="Proof of Post Docs" data-md-component="logo">
+      
+  <img src="../../images/utxo-maestro-logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proof of Post Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Proof of Post Docs" class="md-nav__button md-logo" aria-label="Proof of Post Docs" data-md-component="logo">
+      
+  <img src="../../images/utxo-maestro-logo.jpg" alt="logo">
+
+    </a>
+    Proof of Post Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Platform Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/what-is-proof-of-post/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is Proof of Post?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/key-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Key Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/technical-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technical Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/social-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Social Media Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/wallet-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wallet Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/token-ecosystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Token Ecosystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/content-monetization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content Monetization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/creating-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Content
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/wallet-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wallet Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/monetizing-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monetizing Content
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wallet-based-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wallet-Based Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-jwt-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using JWT Tokens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posts-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Posts API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Posts API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Post
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-posts-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Posts Feed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-to-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      React to Post
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boost-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boost Post
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Users API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Users API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-user-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get User Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#followunfollow-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow/Unfollow User
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Search API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Search API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Universal Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪙 Tokens API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪙 Tokens API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-token-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Token Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Tokens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-token-mentions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Token Mentions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payments-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Payments API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Payments API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-payment-intent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Payment Intent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify Payment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-payment-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Payment History
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Media API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📁 Media API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upload-to-ipfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload to IPFS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Analytics API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Analytics API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-user-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get User Analytics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Notifications API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔔 Notifications API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Notifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mark-notifications-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mark Notifications Read
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-error-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Error Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-error-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Error Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Rate Limits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhooks-coming-soon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Webhooks (Coming Soon)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Platform Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/the-post-token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The POST Token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/presale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../social/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Social Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wallet-based-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wallet-Based Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-jwt-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using JWT Tokens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posts-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Posts API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Posts API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Post
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-posts-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Posts Feed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-to-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      React to Post
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boost-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boost Post
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Users API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Users API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-user-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get User Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#followunfollow-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow/Unfollow User
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Search API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Search API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Universal Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪙 Tokens API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪙 Tokens API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-token-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Token Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Tokens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-token-mentions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Token Mentions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payments-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Payments API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Payments API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-payment-intent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Payment Intent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify Payment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-payment-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Payment History
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Media API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📁 Media API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upload-to-ipfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload to IPFS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Analytics API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Analytics API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-user-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get User Analytics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Notifications API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔔 Notifications API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Notifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mark-notifications-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mark Notifications Read
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-error-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Error Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-error-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Error Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Rate Limits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhooks-coming-soon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Webhooks (Coming Soon)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-documentation">API Documentation<a class="headerlink" href="#api-documentation" title="Permanent link">&para;</a></h1>
+<p>Complete reference for Proof of Post's RESTful API, enabling developers to build integrations and applications on top of the platform.</p>
+<h2 id="authentication">🔐 Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<h3 id="wallet-based-authentication">Wallet-Based Authentication<a class="headerlink" href="#wallet-based-authentication" title="Permanent link">&para;</a></h3>
+<p>All API requests require JWT authentication obtained through wallet signature verification.</p>
+<pre><code class="language-typescript">// Authentication flow
+const authResponse = await fetch('/api/auth/challenge', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ address: walletAddress })
+});
+
+const { challenge } = await authResponse.json();
+
+// Sign with wallet (using Lucid or similar)
+const signature = await wallet.signMessage(challenge);
+
+const verifyResponse = await fetch('/api/auth/verify', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ address: walletAddress, signature, challenge })
+});
+
+const { token } = await verifyResponse.json();
+</code></pre>
+<h3 id="using-jwt-tokens">Using JWT Tokens<a class="headerlink" href="#using-jwt-tokens" title="Permanent link">&para;</a></h3>
+<p>Include the JWT token in the Authorization header for authenticated requests:</p>
+<pre><code class="language-typescript">const response = await fetch('/api/posts', {
+  headers: {
+    'Authorization': `Bearer ${token}`,
+    'Content-Type': 'application/json'
+  }
+});
+</code></pre>
+<h2 id="posts-api">📝 Posts API<a class="headerlink" href="#posts-api" title="Permanent link">&para;</a></h2>
+<h3 id="create-post">Create Post<a class="headerlink" href="#create-post" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">POST /api/posts
+Content-Type: application/json
+Authorization: Bearer &lt;jwt_token&gt;
+
+{
+  &quot;content&quot;: &quot;Hello Cardano community! #cardano $ada&quot;,
+  &quot;mediaUrls&quot;: [&quot;ipfs://QmHash...&quot;],
+  &quot;isPaidContent&quot;: false,
+  &quot;priceLovelace&quot;: 0,
+  &quot;signature&quot;: &quot;optional_post_signature&quot;
+}
+</code></pre>
+<h3 id="get-posts-feed">Get Posts Feed<a class="headerlink" href="#get-posts-feed" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/posts?limit=20&amp;offset=0&amp;userId=optional
+Authorization: Bearer &lt;jwt_token&gt;
+
+Response:
+{
+  &quot;posts&quot;: [
+    {
+      &quot;id&quot;: &quot;post_id&quot;,
+      &quot;userId&quot;: &quot;user_id&quot;,
+      &quot;content&quot;: &quot;Post content&quot;,
+      &quot;mediaUrls&quot;: [&quot;ipfs://...&quot;],
+      &quot;reactionCounts&quot;: {
+        &quot;like&quot;: 5,
+        &quot;rocket&quot;: 2,
+        &quot;diamond&quot;: 1,
+        &quot;degen&quot;: 0
+      },
+      &quot;boostCount&quot;: 3,
+      &quot;replyCount&quot;: 7,
+      &quot;createdAt&quot;: &quot;2024-01-01T00:00:00.000Z&quot;,
+      &quot;user&quot;: {
+        &quot;username&quot;: &quot;creator&quot;,
+        &quot;adaHandle&quot;: &quot;$handle&quot;,
+        &quot;avatarUrl&quot;: &quot;ipfs://...&quot;
+      }
+    }
+  ],
+  &quot;hasMore&quot;: true
+}
+</code></pre>
+<h3 id="react-to-post">React to Post<a class="headerlink" href="#react-to-post" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">POST /api/posts/:postId/react
+Content-Type: application/json
+Authorization: Bearer &lt;jwt_token&gt;
+
+{
+  &quot;reactionType&quot;: &quot;like&quot; | &quot;rocket&quot; | &quot;diamond&quot; | &quot;degen&quot;
+}
+</code></pre>
+<h3 id="boost-post">Boost Post<a class="headerlink" href="#boost-post" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">POST /api/posts/:postId/boost
+Content-Type: application/json
+Authorization: Bearer &lt;jwt_token&gt;
+
+{
+  &quot;comment&quot;: &quot;Optional boost comment&quot;
+}
+</code></pre>
+<h2 id="users-api">👥 Users API<a class="headerlink" href="#users-api" title="Permanent link">&para;</a></h2>
+<h3 id="get-user-profile">Get User Profile<a class="headerlink" href="#get-user-profile" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/users/:userId
+Authorization: Bearer &lt;jwt_token&gt;
+
+Response:
+{
+  &quot;id&quot;: &quot;user_id&quot;,
+  &quot;walletAddress&quot;: &quot;addr1...&quot;,
+  &quot;username&quot;: &quot;username&quot;,
+  &quot;adaHandle&quot;: &quot;$handle&quot;,
+  &quot;displayName&quot;: &quot;Display Name&quot;,
+  &quot;bio&quot;: &quot;User bio&quot;,
+  &quot;avatarUrl&quot;: &quot;ipfs://...&quot;,
+  &quot;bannerUrl&quot;: &quot;ipfs://...&quot;,
+  &quot;followerCount&quot;: 150,
+  &quot;followingCount&quot;: 75,
+  &quot;postCount&quot;: 42,
+  &quot;isFollowing&quot;: true,
+  &quot;createdAt&quot;: &quot;2024-01-01T00:00:00.000Z&quot;
+}
+</code></pre>
+<h3 id="update-profile">Update Profile<a class="headerlink" href="#update-profile" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">PUT /api/profile
+Content-Type: application/json
+Authorization: Bearer &lt;jwt_token&gt;
+
+{
+  &quot;username&quot;: &quot;newusername&quot;,
+  &quot;displayName&quot;: &quot;New Display Name&quot;,
+  &quot;bio&quot;: &quot;Updated bio&quot;,
+  &quot;avatarUrl&quot;: &quot;ipfs://new_avatar&quot;,
+  &quot;websiteUrl&quot;: &quot;https://example.com&quot;,
+  &quot;twitterHandle&quot;: &quot;twitter_handle&quot;
+}
+</code></pre>
+<h3 id="followunfollow-user">Follow/Unfollow User<a class="headerlink" href="#followunfollow-user" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">POST /api/users/:userId/follow
+Authorization: Bearer &lt;jwt_token&gt;
+
+DELETE /api/users/:userId/follow
+Authorization: Bearer &lt;jwt_token&gt;
+</code></pre>
+<h2 id="search-api">🔍 Search API<a class="headerlink" href="#search-api" title="Permanent link">&para;</a></h2>
+<h3 id="universal-search">Universal Search<a class="headerlink" href="#universal-search" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/search?q=cardano&amp;type=all&amp;limit=20&amp;offset=0
+Authorization: Bearer &lt;jwt_token&gt;
+
+Response:
+{
+  &quot;posts&quot;: [...],
+  &quot;users&quot;: [...],
+  &quot;tokens&quot;: [...],
+  &quot;topics&quot;: [...]
+}
+</code></pre>
+<h3 id="search-types">Search Types<a class="headerlink" href="#search-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>all</code> - Search everything</li>
+<li><code>posts</code> - Posts only</li>
+<li><code>users</code> - Users only  </li>
+<li><code>tokens</code> - Tokens only</li>
+<li><code>topics</code> - Hashtags only</li>
+</ul>
+<h2 id="tokens-api">🪙 Tokens API<a class="headerlink" href="#tokens-api" title="Permanent link">&para;</a></h2>
+<h3 id="get-token-information">Get Token Information<a class="headerlink" href="#get-token-information" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/tokens/:tokenId
+Authorization: Bearer &lt;jwt_token&gt;
+
+Response:
+{
+  &quot;id&quot;: &quot;ada&quot;,
+  &quot;policyId&quot;: &quot;&quot;,
+  &quot;assetName&quot;: &quot;&quot;,
+  &quot;ticker&quot;: &quot;ADA&quot;,
+  &quot;name&quot;: &quot;Cardano&quot;,
+  &quot;description&quot;: &quot;Cardano native token&quot;,
+  &quot;logoUrl&quot;: &quot;ipfs://...&quot;,
+  &quot;websiteUrl&quot;: &quot;https://cardano.org&quot;,
+  &quot;currentPrice&quot;: 0.45,
+  &quot;priceChange24h&quot;: 5.2,
+  &quot;marketCap&quot;: 15000000000,
+  &quot;volume24h&quot;: 250000000,
+  &quot;holderCount&quot;: 1000000
+}
+</code></pre>
+<h3 id="search-tokens">Search Tokens<a class="headerlink" href="#search-tokens" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/tokens/search?q=ada&amp;limit=10
+Authorization: Bearer &lt;jwt_token&gt;
+</code></pre>
+<h3 id="get-token-mentions">Get Token Mentions<a class="headerlink" href="#get-token-mentions" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/tokens/:tokenId/mentions?limit=20&amp;offset=0
+Authorization: Bearer &lt;jwt_token&gt;
+</code></pre>
+<h2 id="payments-api">💰 Payments API<a class="headerlink" href="#payments-api" title="Permanent link">&para;</a></h2>
+<h3 id="create-payment-intent">Create Payment Intent<a class="headerlink" href="#create-payment-intent" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">POST /api/payments/intent
+Content-Type: application/json
+Authorization: Bearer &lt;jwt_token&gt;
+
+{
+  &quot;postId&quot;: &quot;post_id&quot;,
+  &quot;type&quot;: &quot;paid_content&quot; | &quot;tip&quot;,
+  &quot;amountLovelace&quot;: 5000000,
+  &quot;recipientAddress&quot;: &quot;addr1...&quot;
+}
+
+Response:
+{
+  &quot;paymentId&quot;: &quot;payment_id&quot;,
+  &quot;recipientAddress&quot;: &quot;addr1...&quot;,
+  &quot;amountLovelace&quot;: 5000000,
+  &quot;expiresAt&quot;: &quot;2024-01-01T01:00:00.000Z&quot;
+}
+</code></pre>
+<h3 id="verify-payment">Verify Payment<a class="headerlink" href="#verify-payment" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">POST /api/payments/:paymentId/verify
+Content-Type: application/json
+Authorization: Bearer &lt;jwt_token&gt;
+
+{
+  &quot;transactionHash&quot;: &quot;tx_hash&quot;
+}
+</code></pre>
+<h3 id="get-payment-history">Get Payment History<a class="headerlink" href="#get-payment-history" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/payments/history?limit=20&amp;offset=0
+Authorization: Bearer &lt;jwt_token&gt;
+</code></pre>
+<h2 id="media-api">📁 Media API<a class="headerlink" href="#media-api" title="Permanent link">&para;</a></h2>
+<h3 id="upload-to-ipfs">Upload to IPFS<a class="headerlink" href="#upload-to-ipfs" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">POST /api/ipfs/upload
+Content-Type: multipart/form-data
+Authorization: Bearer &lt;jwt_token&gt;
+
+Form data:
+- file: &lt;binary_file_data&gt;
+
+Response:
+{
+  &quot;cid&quot;: &quot;QmHash...&quot;,
+  &quot;url&quot;: &quot;https://ipfs.io/ipfs/QmHash...&quot;,
+  &quot;size&quot;: 1024000
+}
+</code></pre>
+<h2 id="analytics-api">📊 Analytics API<a class="headerlink" href="#analytics-api" title="Permanent link">&para;</a></h2>
+<h3 id="get-user-analytics">Get User Analytics<a class="headerlink" href="#get-user-analytics" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/analytics/user
+Authorization: Bearer &lt;jwt_token&gt;
+
+Response:
+{
+  &quot;totalPosts&quot;: 150,
+  &quot;totalReactions&quot;: 1250,
+  &quot;totalTipsReceived&quot;: 45.5,
+  &quot;followerGrowth&quot;: [
+    { &quot;date&quot;: &quot;2024-01-01&quot;, &quot;count&quot;: 100 },
+    { &quot;date&quot;: &quot;2024-01-02&quot;, &quot;count&quot;: 105 }
+  ],
+  &quot;topPosts&quot;: [...]
+}
+</code></pre>
+<h2 id="notifications-api">🔔 Notifications API<a class="headerlink" href="#notifications-api" title="Permanent link">&para;</a></h2>
+<h3 id="get-notifications">Get Notifications<a class="headerlink" href="#get-notifications" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">GET /api/notifications?limit=20&amp;offset=0&amp;unreadOnly=false
+Authorization: Bearer &lt;jwt_token&gt;
+
+Response:
+{
+  &quot;notifications&quot;: [
+    {
+      &quot;id&quot;: &quot;notif_id&quot;,
+      &quot;type&quot;: &quot;reaction&quot; | &quot;follow&quot; | &quot;mention&quot; | &quot;tip&quot; | &quot;boost&quot;,
+      &quot;fromUser&quot;: { &quot;username&quot;: &quot;user&quot;, &quot;avatarUrl&quot;: &quot;...&quot; },
+      &quot;postId&quot;: &quot;optional_post_id&quot;,
+      &quot;message&quot;: &quot;liked your post&quot;,
+      &quot;isRead&quot;: false,
+      &quot;createdAt&quot;: &quot;2024-01-01T00:00:00.000Z&quot;
+    }
+  ],
+  &quot;unreadCount&quot;: 5
+}
+</code></pre>
+<h3 id="mark-notifications-read">Mark Notifications Read<a class="headerlink" href="#mark-notifications-read" title="Permanent link">&para;</a></h3>
+<pre><code class="language-http">PUT /api/notifications/read
+Content-Type: application/json
+Authorization: Bearer &lt;jwt_token&gt;
+
+{
+  &quot;notificationIds&quot;: [&quot;id1&quot;, &quot;id2&quot;, &quot;id3&quot;]
+}
+</code></pre>
+<h2 id="error-handling">🚨 Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<h3 id="standard-error-response">Standard Error Response<a class="headerlink" href="#standard-error-response" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: &quot;INVALID_REQUEST&quot;,
+    &quot;message&quot;: &quot;The request parameters are invalid&quot;,
+    &quot;details&quot;: {
+      &quot;field&quot;: &quot;content&quot;,
+      &quot;issue&quot;: &quot;Content cannot be empty&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="common-error-codes">Common Error Codes<a class="headerlink" href="#common-error-codes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>UNAUTHORIZED</code> - Invalid or missing JWT token</li>
+<li><code>FORBIDDEN</code> - Insufficient permissions</li>
+<li><code>NOT_FOUND</code> - Resource not found</li>
+<li><code>VALIDATION_ERROR</code> - Request validation failed</li>
+<li><code>RATE_LIMITED</code> - Too many requests</li>
+<li><code>BLOCKCHAIN_ERROR</code> - Blockchain interaction failed</li>
+</ul>
+<h2 id="rate-limits">📈 Rate Limits<a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Authenticated requests</strong>: 1000 requests per hour</li>
+<li><strong>Post creation</strong>: 10 posts per minute</li>
+<li><strong>Search requests</strong>: 60 requests per minute</li>
+<li><strong>File uploads</strong>: 5 uploads per minute</li>
+</ul>
+<p>Rate limit headers included in responses:
+- <code>X-RateLimit-Limit</code>: Request limit per window
+- <code>X-RateLimit-Remaining</code>: Remaining requests
+- <code>X-RateLimit-Reset</code>: Window reset time</p>
+<h2 id="webhooks-coming-soon">🔗 Webhooks (Coming Soon)<a class="headerlink" href="#webhooks-coming-soon" title="Permanent link">&para;</a></h2>
+<p>Subscribe to real-time events for your applications:
+- New posts from followed users
+- Reactions on your posts
+- New followers
+- Tips received
+- Mentions</p>
+<p>Ready to integrate? Check out the <a href="../integration-guide/">Integration Guide</a> for practical examples.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "content.code.copy", "search.suggest", "search.highlight", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

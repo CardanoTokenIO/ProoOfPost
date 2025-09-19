@@ -1,0 +1,2142 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CardanoTokenIO.github.io/ProoOfPost/developers/integration-guide/">
+      
+      
+        <link rel="prev" href="../database-schema/">
+      
+      
+        <link rel="next" href="../../getting-started/the-post-token/">
+      
+      
+      <link rel="icon" href="../../images/TokenLogo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Integration Guide - Proof of Post Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#integration-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Proof of Post Docs" class="md-header__button md-logo" aria-label="Proof of Post Docs" data-md-component="logo">
+      
+  <img src="../../images/utxo-maestro-logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proof of Post Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integration Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Proof of Post Docs" class="md-nav__button md-logo" aria-label="Proof of Post Docs" data-md-component="logo">
+      
+  <img src="../../images/utxo-maestro-logo.jpg" alt="logo">
+
+    </a>
+    Proof of Post Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Platform Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/what-is-proof-of-post/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is Proof of Post?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/key-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Key Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/technical-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technical Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/social-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Social Media Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/wallet-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wallet Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/token-ecosystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Token Ecosystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/content-monetization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content Monetization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/creating-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Content
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/wallet-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wallet Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/monetizing-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monetizing Content
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Quick Start Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Quick Start Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Authentication Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Authentication Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wallet-connection-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wallet Connection Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Content Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Content Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-posts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Posts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feed-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feed Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payment-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Payment Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Payment Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipping-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipping System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Search &amp; Discovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Search &amp; Discovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 UI Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 UI Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#react-component-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      React Component Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Real-time Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔔 Real-time Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprehensive-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Experience
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Platform Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/the-post-token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The POST Token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/presale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../social/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Social Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Quick Start Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Quick Start Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Authentication Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Authentication Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wallet-connection-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wallet Connection Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Content Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Content Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-posts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Posts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feed-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feed Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payment-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Payment Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Payment Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipping-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipping System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Search &amp; Discovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Search &amp; Discovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 UI Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 UI Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#react-component-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      React Component Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Real-time Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔔 Real-time Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprehensive-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Experience
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="integration-guide">Integration Guide<a class="headerlink" href="#integration-guide" title="Permanent link">&para;</a></h1>
+<p>Practical guide for integrating with Proof of Post, including code examples, best practices, and common integration patterns.</p>
+<h2 id="quick-start-integration">🚀 Quick Start Integration<a class="headerlink" href="#quick-start-integration" title="Permanent link">&para;</a></h2>
+<h3 id="basic-setup">Basic Setup<a class="headerlink" href="#basic-setup" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">import { ProofOfPostClient } from '@proofofpost/sdk';
+
+const client = new ProofOfPostClient({
+  baseUrl: 'https://api.proofofpost.io',
+  walletProvider: 'eternl', // or 'lace', 'vespr'
+});
+
+// Connect wallet and authenticate
+await client.connect();
+const isAuthenticated = await client.authenticate();
+</code></pre>
+<h3 id="environment-setup">Environment Setup<a class="headerlink" href="#environment-setup" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash"># Install dependencies
+npm install @proofofpost/sdk lucid-cardano
+
+# Environment variables
+PROOF_OF_POST_API_URL=https://api.proofofpost.io
+CARDANO_NETWORK=mainnet
+BLOCKFROST_PROJECT_ID=your_project_id
+</code></pre>
+<h2 id="authentication-integration">🔐 Authentication Integration<a class="headerlink" href="#authentication-integration" title="Permanent link">&para;</a></h2>
+<h3 id="wallet-connection-flow">Wallet Connection Flow<a class="headerlink" href="#wallet-connection-flow" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">class WalletAuth {
+  private wallet: any;
+  private token: string | null = null;
+
+  async connectWallet(walletName: string) {
+    try {
+      // Check if wallet is available
+      if (!window.cardano?.[walletName]) {
+        throw new Error(`${walletName} wallet not found`);
+      }
+
+      // Enable wallet
+      this.wallet = await window.cardano[walletName].enable();
+
+      // Get wallet address
+      const addresses = await this.wallet.getUsedAddresses();
+      const address = addresses[0];
+
+      return { success: true, address };
+    } catch (error) {
+      console.error('Wallet connection failed:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async authenticate(address: string) {
+    try {
+      // Get challenge from server
+      const challengeResponse = await fetch('/api/auth/challenge', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ address })
+      });
+
+      const { challenge } = await challengeResponse.json();
+
+      // Sign challenge with wallet
+      const signature = await this.wallet.signData(
+        Buffer.from(challenge).toString('hex'),
+        Buffer.from(address).toString('hex')
+      );
+
+      // Verify signature and get JWT
+      const authResponse = await fetch('/api/auth/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ address, signature, challenge })
+      });
+
+      const { token } = await authResponse.json();
+      this.token = token;
+
+      return { success: true, token };
+    } catch (error) {
+      console.error('Authentication failed:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  getAuthHeaders() {
+    return {
+      'Authorization': `Bearer ${this.token}`,
+      'Content-Type': 'application/json'
+    };
+  }
+}
+</code></pre>
+<h2 id="content-management">📝 Content Management<a class="headerlink" href="#content-management" title="Permanent link">&para;</a></h2>
+<h3 id="creating-posts">Creating Posts<a class="headerlink" href="#creating-posts" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">class PostManager {
+  constructor(private auth: WalletAuth) {}
+
+  async createPost(content: string, options: {
+    mediaFiles?: File[];
+    isPaidContent?: boolean;
+    priceAda?: number;
+    signPost?: boolean;
+  } = {}) {
+    try {
+      let mediaUrls: string[] = [];
+
+      // Upload media files if provided
+      if (options.mediaFiles?.length) {
+        for (const file of options.mediaFiles) {
+          const uploadResponse = await this.uploadMedia(file);
+          mediaUrls.push(uploadResponse.url);
+        }
+      }
+
+      // Prepare post data
+      const postData = {
+        content,
+        mediaUrls,
+        isPaidContent: options.isPaidContent || false,
+        priceLovelace: options.priceAda ? options.priceAda * 1_000_000 : 0
+      };
+
+      // Sign post if requested
+      if (options.signPost) {
+        postData.signature = await this.signPost(postData);
+      }
+
+      // Create post
+      const response = await fetch('/api/posts', {
+        method: 'POST',
+        headers: this.auth.getAuthHeaders(),
+        body: JSON.stringify(postData)
+      });
+
+      return await response.json();
+    } catch (error) {
+      console.error('Post creation failed:', error);
+      throw error;
+    }
+  }
+
+  private async uploadMedia(file: File): Promise&lt;{ url: string; cid: string }&gt; {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const response = await fetch('/api/ipfs/upload', {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${this.auth.token}` },
+      body: formData
+    });
+
+    return await response.json();
+  }
+
+  private async signPost(postData: any): Promise&lt;string&gt; {
+    const message = JSON.stringify(postData);
+    return await this.auth.wallet.signData(
+      Buffer.from(message).toString('hex'),
+      Buffer.from(this.auth.address).toString('hex')
+    );
+  }
+}
+</code></pre>
+<h3 id="feed-integration">Feed Integration<a class="headerlink" href="#feed-integration" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">class FeedManager {
+  constructor(private auth: WalletAuth) {}
+
+  async getFeed(options: {
+    limit?: number;
+    offset?: number;
+    userId?: string;
+    includeBoosts?: boolean;
+  } = {}) {
+    const params = new URLSearchParams({
+      limit: (options.limit || 20).toString(),
+      offset: (options.offset || 0).toString(),
+      includeBoosts: (options.includeBoosts !== false).toString()
+    });
+
+    if (options.userId) {
+      params.append('userId', options.userId);
+    }
+
+    const response = await fetch(`/api/posts?${params}`, {
+      headers: this.auth.getAuthHeaders()
+    });
+
+    return await response.json();
+  }
+
+  async reactToPost(postId: string, reactionType: 'like' | 'rocket' | 'diamond' | 'degen') {
+    const response = await fetch(`/api/posts/${postId}/react`, {
+      method: 'POST',
+      headers: this.auth.getAuthHeaders(),
+      body: JSON.stringify({ reactionType })
+    });
+
+    return await response.json();
+  }
+
+  async boostPost(postId: string, comment?: string) {
+    const response = await fetch(`/api/posts/${postId}/boost`, {
+      method: 'POST',
+      headers: this.auth.getAuthHeaders(),
+      body: JSON.stringify({ comment })
+    });
+
+    return await response.json();
+  }
+}
+</code></pre>
+<h2 id="payment-integration">💰 Payment Integration<a class="headerlink" href="#payment-integration" title="Permanent link">&para;</a></h2>
+<h3 id="tipping-system">Tipping System<a class="headerlink" href="#tipping-system" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">class PaymentManager {
+  constructor(private auth: WalletAuth) {}
+
+  async tipPost(postId: string, amountAda: number, message?: string) {
+    try {
+      // Create payment intent
+      const intentResponse = await fetch('/api/payments/intent', {
+        method: 'POST',
+        headers: this.auth.getAuthHeaders(),
+        body: JSON.stringify({
+          postId,
+          type: 'tip',
+          amountLovelace: amountAda * 1_000_000,
+          message
+        })
+      });
+
+      const { paymentId, recipientAddress, amountLovelace } = await intentResponse.json();
+
+      // Build transaction using Lucid
+      const lucid = await Lucid.new(
+        new Blockfrost('https://cardano-mainnet.blockfrost.io/api/v0', 'your_project_id'),
+        'Mainnet'
+      );
+
+      lucid.selectWallet(this.auth.wallet);
+
+      const tx = await lucid
+        .newTx()
+        .payToAddress(recipientAddress, { lovelace: BigInt(amountLovelace) })
+        .complete();
+
+      const signedTx = await tx.sign().complete();
+      const txHash = await signedTx.submit();
+
+      // Verify payment
+      const verifyResponse = await fetch(`/api/payments/${paymentId}/verify`, {
+        method: 'POST',
+        headers: this.auth.getAuthHeaders(),
+        body: JSON.stringify({ transactionHash: txHash })
+      });
+
+      return await verifyResponse.json();
+    } catch (error) {
+      console.error('Tip payment failed:', error);
+      throw error;
+    }
+  }
+
+  async purchasePaidContent(postId: string) {
+    try {
+      // Get post details to check price
+      const postResponse = await fetch(`/api/posts/${postId}`, {
+        headers: this.auth.getAuthHeaders()
+      });
+      const post = await postResponse.json();
+
+      if (!post.isPaidContent) {
+        throw new Error('Post is not paid content');
+      }
+
+      // Create payment intent
+      const intentResponse = await fetch('/api/payments/intent', {
+        method: 'POST',
+        headers: this.auth.getAuthHeaders(),
+        body: JSON.stringify({
+          postId,
+          type: 'paid_content',
+          amountLovelace: post.priceLovelace
+        })
+      });
+
+      const { paymentId, recipientAddress, amountLovelace } = await intentResponse.json();
+
+      // Process payment (similar to tip flow)
+      // ... payment processing code ...
+
+      return { success: true, txHash };
+    } catch (error) {
+      console.error('Content purchase failed:', error);
+      throw error;
+    }
+  }
+}
+</code></pre>
+<h2 id="search-discovery">🔍 Search &amp; Discovery<a class="headerlink" href="#search-discovery" title="Permanent link">&para;</a></h2>
+<h3 id="search-integration">Search Integration<a class="headerlink" href="#search-integration" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">class SearchManager {
+  constructor(private auth: WalletAuth) {}
+
+  async search(query: string, options: {
+    type?: 'all' | 'posts' | 'users' | 'tokens' | 'topics';
+    limit?: number;
+    offset?: number;
+  } = {}) {
+    const params = new URLSearchParams({
+      q: query,
+      type: options.type || 'all',
+      limit: (options.limit || 20).toString(),
+      offset: (options.offset || 0).toString()
+    });
+
+    const response = await fetch(`/api/search?${params}`, {
+      headers: this.auth.getAuthHeaders()
+    });
+
+    return await response.json();
+  }
+
+  async getTrendingTopics(limit = 10) {
+    const response = await fetch(`/api/topics/trending?limit=${limit}`, {
+      headers: this.auth.getAuthHeaders()
+    });
+
+    return await response.json();
+  }
+
+  async getTokenInfo(tokenId: string) {
+    const response = await fetch(`/api/tokens/${tokenId}`, {
+      headers: this.auth.getAuthHeaders()
+    });
+
+    return await response.json();
+  }
+}
+</code></pre>
+<h2 id="ui-components">🎨 UI Components<a class="headerlink" href="#ui-components" title="Permanent link">&para;</a></h2>
+<h3 id="react-component-examples">React Component Examples<a class="headerlink" href="#react-component-examples" title="Permanent link">&para;</a></h3>
+<pre><code class="language-tsx">import React, { useState, useEffect } from 'react';
+
+// Post Component
+export const PostCard: React.FC&lt;{ post: Post }&gt; = ({ post }) =&gt; {
+  const [reactions, setReactions] = useState(post.reactionCounts);
+
+  const handleReaction = async (type: string) =&gt; {
+    try {
+      await postManager.reactToPost(post.id, type);
+      setReactions(prev =&gt; ({
+        ...prev,
+        [type]: prev[type] + 1
+      }));
+    } catch (error) {
+      console.error('Reaction failed:', error);
+    }
+  };
+
+  return (
+    &lt;div className=&quot;post-card&quot;&gt;
+      &lt;div className=&quot;post-header&quot;&gt;
+        &lt;img src={post.user.avatarUrl} alt={post.user.username} /&gt;
+        &lt;span&gt;@{post.user.username}&lt;/span&gt;
+        {post.user.adaHandle &amp;&amp; &lt;span&gt;${post.user.adaHandle}&lt;/span&gt;}
+      &lt;/div&gt;
+
+      &lt;div className=&quot;post-content&quot;&gt;
+        {post.content}
+        {post.mediaUrls.map(url =&gt; (
+          &lt;img key={url} src={url} alt=&quot;Post media&quot; /&gt;
+        ))}
+      &lt;/div&gt;
+
+      &lt;div className=&quot;post-actions&quot;&gt;
+        &lt;button onClick={() =&gt; handleReaction('like')}&gt;
+          ❤️ {reactions.like}
+        &lt;/button&gt;
+        &lt;button onClick={() =&gt; handleReaction('rocket')}&gt;
+          🚀 {reactions.rocket}
+        &lt;/button&gt;
+        &lt;button onClick={() =&gt; handleReaction('diamond')}&gt;
+          💎 {reactions.diamond}
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+// Wallet Connect Component
+export const WalletConnector: React.FC = () =&gt; {
+  const [isConnecting, setIsConnecting] = useState(false);
+  const [connectedWallet, setConnectedWallet] = useState&lt;string | null&gt;(null);
+
+  const connectWallet = async (walletName: string) =&gt; {
+    setIsConnecting(true);
+    try {
+      const result = await walletAuth.connectWallet(walletName);
+      if (result.success) {
+        const authResult = await walletAuth.authenticate(result.address);
+        if (authResult.success) {
+          setConnectedWallet(walletName);
+        }
+      }
+    } catch (error) {
+      console.error('Connection failed:', error);
+    } finally {
+      setIsConnecting(false);
+    }
+  };
+
+  return (
+    &lt;div className=&quot;wallet-connector&quot;&gt;
+      {!connectedWallet ? (
+        &lt;div className=&quot;wallet-options&quot;&gt;
+          &lt;button onClick={() =&gt; connectWallet('eternl')} disabled={isConnecting}&gt;
+            Connect Eternl
+          &lt;/button&gt;
+          &lt;button onClick={() =&gt; connectWallet('lace')} disabled={isConnecting}&gt;
+            Connect Lace
+          &lt;/button&gt;
+          &lt;button onClick={() =&gt; connectWallet('vespr')} disabled={isConnecting}&gt;
+            Connect Vespr
+          &lt;/button&gt;
+        &lt;/div&gt;
+      ) : (
+        &lt;div className=&quot;wallet-connected&quot;&gt;
+          Connected: {connectedWallet}
+        &lt;/div&gt;
+      )}
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<h2 id="real-time-updates">🔔 Real-time Updates<a class="headerlink" href="#real-time-updates" title="Permanent link">&para;</a></h2>
+<h3 id="websocket-integration">WebSocket Integration<a class="headerlink" href="#websocket-integration" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">class RealtimeManager {
+  private ws: WebSocket | null = null;
+  private reconnectAttempts = 0;
+  private maxReconnectAttempts = 5;
+
+  connect(token: string) {
+    const wsUrl = `wss://api.proofofpost.io/ws?token=${token}`;
+    this.ws = new WebSocket(wsUrl);
+
+    this.ws.onopen = () =&gt; {
+      console.log('WebSocket connected');
+      this.reconnectAttempts = 0;
+    };
+
+    this.ws.onmessage = (event) =&gt; {
+      const data = JSON.parse(event.data);
+      this.handleMessage(data);
+    };
+
+    this.ws.onclose = () =&gt; {
+      console.log('WebSocket disconnected');
+      this.attemptReconnect(token);
+    };
+
+    this.ws.onerror = (error) =&gt; {
+      console.error('WebSocket error:', error);
+    };
+  }
+
+  private handleMessage(data: any) {
+    switch (data.type) {
+      case 'new_post':
+        this.onNewPost(data.post);
+        break;
+      case 'reaction':
+        this.onReaction(data.postId, data.reaction);
+        break;
+      case 'tip':
+        this.onTip(data.postId, data.tip);
+        break;
+      case 'notification':
+        this.onNotification(data.notification);
+        break;
+    }
+  }
+
+  private attemptReconnect(token: string) {
+    if (this.reconnectAttempts &lt; this.maxReconnectAttempts) {
+      this.reconnectAttempts++;
+      setTimeout(() =&gt; {
+        console.log(`Reconnecting... Attempt ${this.reconnectAttempts}`);
+        this.connect(token);
+      }, Math.pow(2, this.reconnectAttempts) * 1000);
+    }
+  }
+
+  // Event handlers
+  onNewPost: (post: any) =&gt; void = () =&gt; {};
+  onReaction: (postId: string, reaction: any) =&gt; void = () =&gt; {};
+  onTip: (postId: string, tip: any) =&gt; void = () =&gt; {};
+  onNotification: (notification: any) =&gt; void = () =&gt; {};
+}
+</code></pre>
+<h2 id="error-handling">🚨 Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<h3 id="comprehensive-error-handling">Comprehensive Error Handling<a class="headerlink" href="#comprehensive-error-handling" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">class ProofOfPostError extends Error {
+  constructor(
+    public code: string,
+    message: string,
+    public statusCode?: number,
+    public details?: any
+  ) {
+    super(message);
+    this.name = 'ProofOfPostError';
+  }
+}
+
+class ErrorHandler {
+  static handle(error: any): ProofOfPostError {
+    if (error instanceof ProofOfPostError) {
+      return error;
+    }
+
+    // Network errors
+    if (error.name === 'NetworkError' || !navigator.onLine) {
+      return new ProofOfPostError(
+        'NETWORK_ERROR',
+        'Network connection failed. Please check your internet connection.',
+        0
+      );
+    }
+
+    // API errors
+    if (error.status) {
+      switch (error.status) {
+        case 401:
+          return new ProofOfPostError('UNAUTHORIZED', 'Authentication required');
+        case 403:
+          return new ProofOfPostError('FORBIDDEN', 'Insufficient permissions');
+        case 404:
+          return new ProofOfPostError('NOT_FOUND', 'Resource not found');
+        case 429:
+          return new ProofOfPostError('RATE_LIMITED', 'Too many requests');
+        default:
+          return new ProofOfPostError('API_ERROR', error.message || 'API request failed');
+      }
+    }
+
+    // Wallet errors
+    if (error.message?.includes('wallet')) {
+      return new ProofOfPostError('WALLET_ERROR', 'Wallet operation failed');
+    }
+
+    // Generic error
+    return new ProofOfPostError('UNKNOWN_ERROR', error.message || 'An unexpected error occurred');
+  }
+}
+</code></pre>
+<h2 id="best-practices">📊 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="performance-optimization">Performance Optimization<a class="headerlink" href="#performance-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Implement caching</strong> for frequently accessed data</li>
+<li><strong>Use pagination</strong> for large data sets</li>
+<li><strong>Optimize images</strong> before uploading to IPFS</li>
+<li><strong>Batch API requests</strong> when possible</li>
+<li><strong>Implement retry logic</strong> for failed requests</li>
+</ul>
+<h3 id="security-guidelines">Security Guidelines<a class="headerlink" href="#security-guidelines" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Validate all inputs</strong> before sending to API</li>
+<li><strong>Never store private keys</strong> in your application</li>
+<li><strong>Use HTTPS</strong> for all API communications</li>
+<li><strong>Implement rate limiting</strong> in your client</li>
+<li><strong>Sanitize user content</strong> to prevent XSS</li>
+</ul>
+<h3 id="user-experience">User Experience<a class="headerlink" href="#user-experience" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Show loading states</strong> during operations</li>
+<li><strong>Provide clear error messages</strong> to users</li>
+<li><strong>Implement offline support</strong> where possible</li>
+<li><strong>Use optimistic updates</strong> for instant feedback</li>
+<li><strong>Cache content</strong> for faster loading</li>
+</ul>
+<p>Ready to build? Start with the <a href="../api-documentation/">API Documentation</a> for detailed endpoint information.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "content.code.copy", "search.suggest", "search.highlight", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

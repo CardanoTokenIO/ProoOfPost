@@ -1,0 +1,1974 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CardanoTokenIO.github.io/ProoOfPost/developers/database-schema/">
+      
+      
+        <link rel="prev" href="../api-documentation/">
+      
+      
+        <link rel="next" href="../integration-guide/">
+      
+      
+      <link rel="icon" href="../../images/TokenLogo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Database Schema - Proof of Post Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#database-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Proof of Post Docs" class="md-header__button md-logo" aria-label="Proof of Post Docs" data-md-component="logo">
+      
+  <img src="../../images/utxo-maestro-logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proof of Post Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Database Schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Proof of Post Docs" class="md-nav__button md-logo" aria-label="Proof of Post Docs" data-md-component="logo">
+      
+  <img src="../../images/utxo-maestro-logo.jpg" alt="logo">
+
+    </a>
+    Proof of Post Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Platform Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/what-is-proof-of-post/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is Proof of Post?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/key-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Key Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform/technical-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technical Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/social-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Social Media Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/wallet-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wallet Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/token-ecosystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Token Ecosystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/content-monetization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content Monetization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/creating-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Content
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/wallet-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wallet Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/monetizing-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monetizing Content
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Database Schema
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Schema
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Schema Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ Schema Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Users Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Users Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posts-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Posts Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Posts Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactions-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Reactions Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boosts-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Boosts Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#follows-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Follows Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬 Comments Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Tips Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topics-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏷️ Topics Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪙 Tokens Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paid-posts-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      💎 Paid Posts Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purchases-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛒 Purchases Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sessions-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Sessions Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Media Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Notifications Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Database Triggers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Database Triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-counters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Counters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Performance Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Performance Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Tasks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Platform Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/the-post-token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The POST Token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/presale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../social/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Social Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Schema Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ Schema Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Users Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Users Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posts-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Posts Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Posts Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactions-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Reactions Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boosts-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Boosts Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#follows-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Follows Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬 Comments Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Tips Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topics-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏷️ Topics Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪙 Tokens Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paid-posts-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      💎 Paid Posts Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purchases-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛒 Purchases Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sessions-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Sessions Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Media Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Notifications Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Database Triggers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Database Triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-counters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Counters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Performance Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Performance Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Tasks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="database-schema">Database Schema<a class="headerlink" href="#database-schema" title="Permanent link">&para;</a></h1>
+<p>Complete database schema documentation for Proof of Post, built on SQLite with Drizzle ORM for type safety and performance.</p>
+<h2 id="schema-overview">🏗️ Schema Overview<a class="headerlink" href="#schema-overview" title="Permanent link">&para;</a></h2>
+<p>The platform uses a relational database design optimized for social media interactions and blockchain integration.</p>
+<h3 id="core-tables">Core Tables<a class="headerlink" href="#core-tables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>users</strong> - User profiles and authentication</li>
+<li><strong>posts</strong> - Content and post metadata</li>
+<li><strong>sessions</strong> - JWT authentication sessions</li>
+<li><strong>reactions</strong> - User reactions to posts</li>
+<li><strong>boosts</strong> - Post sharing/retweeting</li>
+<li><strong>follows</strong> - User follow relationships</li>
+<li><strong>comments</strong> - Post replies and comments</li>
+<li><strong>bookmarks</strong> - Saved posts</li>
+<li><strong>tips</strong> - Token tips sent to posts</li>
+<li><strong>topics</strong> - Hashtag tracking</li>
+<li><strong>tokens</strong> - Token metadata cache</li>
+<li><strong>paid_posts</strong> - Monetized content configuration</li>
+<li><strong>purchases</strong> - Payment tracking</li>
+<li><strong>media</strong> - IPFS file metadata</li>
+</ul>
+<h2 id="users-table">👥 Users Table<a class="headerlink" href="#users-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE users (
+  id TEXT PRIMARY KEY,
+  wallet_address TEXT UNIQUE NOT NULL,
+  username TEXT UNIQUE,
+  ada_handle TEXT UNIQUE,
+  display_name TEXT,
+  bio TEXT,
+  avatar_url TEXT,
+  banner_url TEXT,
+  website_url TEXT,
+  twitter_handle TEXT,
+  discord_handle TEXT,
+  telegram_handle TEXT,
+  follower_count INTEGER DEFAULT 0,
+  following_count INTEGER DEFAULT 0,
+  post_count INTEGER DEFAULT 0,
+  reputation_score INTEGER DEFAULT 0,
+  is_verified BOOLEAN DEFAULT FALSE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Indexes
+CREATE INDEX idx_users_wallet_address ON users(wallet_address);
+CREATE INDEX idx_users_username ON users(username);
+CREATE INDEX idx_users_ada_handle ON users(ada_handle);
+CREATE INDEX idx_users_created_at ON users(created_at);
+</code></pre>
+<h3 id="user-fields">User Fields<a class="headerlink" href="#user-fields" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>id</code> - Unique user identifier (UUID)</li>
+<li><code>wallet_address</code> - Cardano wallet address (unique)</li>
+<li><code>username</code> - Platform username (@username)</li>
+<li><code>ada_handle</code> - On-chain ADA handle ($handle)</li>
+<li><code>display_name</code> - User's display name</li>
+<li><code>bio</code> - User biography (max 280 chars)</li>
+<li><code>avatar_url</code> - Profile picture IPFS URL</li>
+<li><code>banner_url</code> - Profile banner IPFS URL</li>
+<li><code>social_links</code> - External social media links</li>
+<li><code>reputation_score</code> - Community reputation metric</li>
+<li><code>is_verified</code> - Verification status for notable accounts</li>
+</ul>
+<h2 id="posts-table">📝 Posts Table<a class="headerlink" href="#posts-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE posts (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  content TEXT NOT NULL,
+  media_urls TEXT, -- JSON array of IPFS URLs
+  signature TEXT, -- Cryptographic signature
+  signature_verified BOOLEAN DEFAULT FALSE,
+  hashtags TEXT, -- JSON array of hashtags
+  mentioned_users TEXT, -- JSON array of user IDs
+  mentioned_tokens TEXT, -- JSON array of token IDs
+  reaction_counts TEXT DEFAULT '{&quot;like&quot;:0,&quot;rocket&quot;:0,&quot;diamond&quot;:0,&quot;degen&quot;:0}',
+  boost_count INTEGER DEFAULT 0,
+  reply_count INTEGER DEFAULT 0,
+  tip_count INTEGER DEFAULT 0,
+  tip_total_lovelace INTEGER DEFAULT 0,
+  view_count INTEGER DEFAULT 0,
+  is_paid_content BOOLEAN DEFAULT FALSE,
+  price_lovelace INTEGER DEFAULT 0,
+  purchase_count INTEGER DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Indexes
+CREATE INDEX idx_posts_user_id ON posts(user_id);
+CREATE INDEX idx_posts_created_at ON posts(created_at DESC);
+CREATE INDEX idx_posts_hashtags ON posts(hashtags);
+CREATE INDEX idx_posts_is_paid_content ON posts(is_paid_content);
+CREATE INDEX idx_posts_signature_verified ON posts(signature_verified);
+
+-- Full-text search index
+CREATE VIRTUAL TABLE posts_fts USING fts5(
+  content,
+  hashtags,
+  content='posts',
+  content_rowid='rowid'
+);
+</code></pre>
+<h3 id="post-fields">Post Fields<a class="headerlink" href="#post-fields" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>content</code> - Post text content (max 280 chars)</li>
+<li><code>media_urls</code> - JSON array of IPFS media URLs</li>
+<li><code>signature</code> - CIP-8 cryptographic signature</li>
+<li><code>hashtags</code> - Extracted hashtags for indexing</li>
+<li><code>mentioned_users/tokens</code> - Referenced entities</li>
+<li><code>reaction_counts</code> - JSON object with reaction counts</li>
+<li><code>is_paid_content</code> - Whether content requires payment</li>
+<li><code>price_lovelace</code> - Price in lovelace for paid content</li>
+</ul>
+<h2 id="reactions-table">💡 Reactions Table<a class="headerlink" href="#reactions-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE reactions (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  post_id TEXT NOT NULL,
+  reaction_type TEXT NOT NULL CHECK (reaction_type IN ('like', 'rocket', 'diamond', 'degen')),
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+  UNIQUE(user_id, post_id, reaction_type)
+);
+
+-- Indexes
+CREATE INDEX idx_reactions_post_id ON reactions(post_id);
+CREATE INDEX idx_reactions_user_id ON reactions(user_id);
+CREATE INDEX idx_reactions_type ON reactions(reaction_type);
+CREATE INDEX idx_reactions_created_at ON reactions(created_at);
+</code></pre>
+<h2 id="boosts-table">🔄 Boosts Table<a class="headerlink" href="#boosts-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE boosts (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  post_id TEXT NOT NULL,
+  comment TEXT, -- Optional boost comment
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+  UNIQUE(user_id, post_id)
+);
+
+-- Indexes
+CREATE INDEX idx_boosts_post_id ON boosts(post_id);
+CREATE INDEX idx_boosts_user_id ON boosts(user_id);
+CREATE INDEX idx_boosts_created_at ON boosts(created_at DESC);
+</code></pre>
+<h2 id="follows-table">👥 Follows Table<a class="headerlink" href="#follows-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE follows (
+  id TEXT PRIMARY KEY,
+  follower_id TEXT NOT NULL,
+  following_id TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (follower_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (following_id) REFERENCES users(id) ON DELETE CASCADE,
+  UNIQUE(follower_id, following_id),
+  CHECK(follower_id != following_id)
+);
+
+-- Indexes
+CREATE INDEX idx_follows_follower_id ON follows(follower_id);
+CREATE INDEX idx_follows_following_id ON follows(following_id);
+CREATE INDEX idx_follows_created_at ON follows(created_at);
+</code></pre>
+<h2 id="comments-table">💬 Comments Table<a class="headerlink" href="#comments-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE comments (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  post_id TEXT NOT NULL,
+  parent_comment_id TEXT, -- For threaded replies
+  content TEXT NOT NULL,
+  signature TEXT,
+  signature_verified BOOLEAN DEFAULT FALSE,
+  reaction_counts TEXT DEFAULT '{&quot;like&quot;:0,&quot;rocket&quot;:0,&quot;diamond&quot;:0,&quot;degen&quot;:0}',
+  reply_count INTEGER DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+  FOREIGN KEY (parent_comment_id) REFERENCES comments(id) ON DELETE CASCADE
+);
+
+-- Indexes
+CREATE INDEX idx_comments_post_id ON comments(post_id);
+CREATE INDEX idx_comments_user_id ON comments(user_id);
+CREATE INDEX idx_comments_parent_id ON comments(parent_comment_id);
+CREATE INDEX idx_comments_created_at ON comments(created_at);
+</code></pre>
+<h2 id="tips-table">💰 Tips Table<a class="headerlink" href="#tips-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE tips (
+  id TEXT PRIMARY KEY,
+  from_user_id TEXT NOT NULL,
+  to_post_id TEXT NOT NULL,
+  to_user_id TEXT NOT NULL,
+  amount_lovelace INTEGER NOT NULL,
+  token_policy_id TEXT DEFAULT '',
+  token_asset_name TEXT DEFAULT '',
+  token_amount TEXT DEFAULT '0',
+  transaction_hash TEXT UNIQUE NOT NULL,
+  message TEXT,
+  is_anonymous BOOLEAN DEFAULT FALSE,
+  verified BOOLEAN DEFAULT FALSE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (to_post_id) REFERENCES posts(id) ON DELETE CASCADE,
+  FOREIGN KEY (to_user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Indexes
+CREATE INDEX idx_tips_to_post_id ON tips(to_post_id);
+CREATE INDEX idx_tips_to_user_id ON tips(to_user_id);
+CREATE INDEX idx_tips_from_user_id ON tips(from_user_id);
+CREATE INDEX idx_tips_transaction_hash ON tips(transaction_hash);
+CREATE INDEX idx_tips_created_at ON tips(created_at DESC);
+</code></pre>
+<h2 id="topics-table">🏷️ Topics Table<a class="headerlink" href="#topics-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE topics (
+  id TEXT PRIMARY KEY,
+  name TEXT UNIQUE NOT NULL,
+  display_name TEXT NOT NULL,
+  description TEXT,
+  post_count INTEGER DEFAULT 0,
+  follower_count INTEGER DEFAULT 0,
+  trending_score REAL DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Indexes
+CREATE INDEX idx_topics_name ON topics(name);
+CREATE INDEX idx_topics_trending_score ON topics(trending_score DESC);
+CREATE INDEX idx_topics_post_count ON topics(post_count DESC);
+</code></pre>
+<h2 id="tokens-table">🪙 Tokens Table<a class="headerlink" href="#tokens-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE tokens (
+  id TEXT PRIMARY KEY,
+  policy_id TEXT NOT NULL,
+  asset_name TEXT NOT NULL,
+  ticker TEXT,
+  name TEXT NOT NULL,
+  description TEXT,
+  logo_url TEXT,
+  website_url TEXT,
+  twitter_handle TEXT,
+  discord_url TEXT,
+  telegram_url TEXT,
+  current_price REAL DEFAULT 0,
+  price_change_24h REAL DEFAULT 0,
+  market_cap REAL DEFAULT 0,
+  volume_24h REAL DEFAULT 0,
+  holder_count INTEGER DEFAULT 0,
+  mention_count INTEGER DEFAULT 0,
+  follower_count INTEGER DEFAULT 0,
+  total_supply TEXT DEFAULT '0',
+  circulating_supply TEXT DEFAULT '0',
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(policy_id, asset_name)
+);
+
+-- Indexes
+CREATE INDEX idx_tokens_ticker ON tokens(ticker);
+CREATE INDEX idx_tokens_name ON tokens(name);
+CREATE INDEX idx_tokens_policy_id ON tokens(policy_id);
+CREATE INDEX idx_tokens_mention_count ON tokens(mention_count DESC);
+CREATE INDEX idx_tokens_market_cap ON tokens(market_cap DESC);
+</code></pre>
+<h2 id="paid-posts-table">💎 Paid Posts Table<a class="headerlink" href="#paid-posts-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE paid_posts (
+  id TEXT PRIMARY KEY,
+  post_id TEXT UNIQUE NOT NULL,
+  price_lovelace INTEGER NOT NULL,
+  preview_url TEXT, -- Blurred/watermarked preview
+  full_url TEXT NOT NULL, -- Full resolution content
+  purchase_count INTEGER DEFAULT 0,
+  total_revenue_lovelace INTEGER DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+-- Indexes
+CREATE INDEX idx_paid_posts_post_id ON paid_posts(post_id);
+CREATE INDEX idx_paid_posts_price ON paid_posts(price_lovelace);
+</code></pre>
+<h2 id="purchases-table">🛒 Purchases Table<a class="headerlink" href="#purchases-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE purchases (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  post_id TEXT NOT NULL,
+  paid_post_id TEXT NOT NULL,
+  amount_lovelace INTEGER NOT NULL,
+  transaction_hash TEXT UNIQUE NOT NULL,
+  verified BOOLEAN DEFAULT FALSE,
+  access_granted BOOLEAN DEFAULT FALSE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+  FOREIGN KEY (paid_post_id) REFERENCES paid_posts(id) ON DELETE CASCADE,
+  UNIQUE(user_id, post_id)
+);
+
+-- Indexes
+CREATE INDEX idx_purchases_user_id ON purchases(user_id);
+CREATE INDEX idx_purchases_post_id ON purchases(post_id);
+CREATE INDEX idx_purchases_transaction_hash ON purchases(transaction_hash);
+</code></pre>
+<h2 id="sessions-table">🔐 Sessions Table<a class="headerlink" href="#sessions-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE sessions (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  wallet_address TEXT NOT NULL,
+  jwt_token_hash TEXT UNIQUE NOT NULL,
+  expires_at DATETIME NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  last_used_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  user_agent TEXT,
+  ip_address TEXT,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Indexes
+CREATE INDEX idx_sessions_user_id ON sessions(user_id);
+CREATE INDEX idx_sessions_wallet_address ON sessions(wallet_address);
+CREATE INDEX idx_sessions_expires_at ON sessions(expires_at);
+CREATE INDEX idx_sessions_jwt_token_hash ON sessions(jwt_token_hash);
+</code></pre>
+<h2 id="media-table">📁 Media Table<a class="headerlink" href="#media-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE media (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  post_id TEXT,
+  ipfs_cid TEXT UNIQUE NOT NULL,
+  filename TEXT NOT NULL,
+  mime_type TEXT NOT NULL,
+  file_size INTEGER NOT NULL,
+  width INTEGER,
+  height INTEGER,
+  duration REAL, -- For videos
+  alt_text TEXT,
+  is_paid_content BOOLEAN DEFAULT FALSE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+-- Indexes
+CREATE INDEX idx_media_user_id ON media(user_id);
+CREATE INDEX idx_media_post_id ON media(post_id);
+CREATE INDEX idx_media_ipfs_cid ON media(ipfs_cid);
+CREATE INDEX idx_media_mime_type ON media(mime_type);
+</code></pre>
+<h2 id="notifications-table">🔔 Notifications Table<a class="headerlink" href="#notifications-table" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE notifications (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  from_user_id TEXT,
+  post_id TEXT,
+  type TEXT NOT NULL CHECK (type IN ('reaction', 'boost', 'comment', 'follow', 'mention', 'tip', 'purchase')),
+  title TEXT NOT NULL,
+  message TEXT NOT NULL,
+  data TEXT, -- JSON data for notification
+  is_read BOOLEAN DEFAULT FALSE,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (from_user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+-- Indexes
+CREATE INDEX idx_notifications_user_id ON notifications(user_id);
+CREATE INDEX idx_notifications_is_read ON notifications(is_read);
+CREATE INDEX idx_notifications_created_at ON notifications(created_at DESC);
+CREATE INDEX idx_notifications_type ON notifications(type);
+</code></pre>
+<h2 id="database-triggers">🔄 Database Triggers<a class="headerlink" href="#database-triggers" title="Permanent link">&para;</a></h2>
+<h3 id="update-counters">Update Counters<a class="headerlink" href="#update-counters" title="Permanent link">&para;</a></h3>
+<pre><code class="language-sql">-- Update post count when posts are created/deleted
+CREATE TRIGGER update_user_post_count_insert
+AFTER INSERT ON posts
+BEGIN
+  UPDATE users SET 
+    post_count = post_count + 1,
+    updated_at = CURRENT_TIMESTAMP
+  WHERE id = NEW.user_id;
+END;
+
+-- Update reaction counts on posts
+CREATE TRIGGER update_post_reaction_counts
+AFTER INSERT ON reactions
+BEGIN
+  UPDATE posts SET 
+    reaction_counts = json_set(
+      reaction_counts, 
+      '$.' || NEW.reaction_type, 
+      json_extract(reaction_counts, '$.' || NEW.reaction_type) + 1
+    ),
+    updated_at = CURRENT_TIMESTAMP
+  WHERE id = NEW.post_id;
+END;
+
+-- Update follower counts
+CREATE TRIGGER update_follow_counts
+AFTER INSERT ON follows
+BEGIN
+  UPDATE users SET 
+    follower_count = follower_count + 1,
+    updated_at = CURRENT_TIMESTAMP
+  WHERE id = NEW.following_id;
+
+  UPDATE users SET 
+    following_count = following_count + 1,
+    updated_at = CURRENT_TIMESTAMP
+  WHERE id = NEW.follower_id;
+END;
+</code></pre>
+<h2 id="performance-optimization">📊 Performance Optimization<a class="headerlink" href="#performance-optimization" title="Permanent link">&para;</a></h2>
+<h3 id="query-optimization">Query Optimization<a class="headerlink" href="#query-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Composite indexes</strong> for common query patterns</li>
+<li><strong>Partial indexes</strong> for filtered queries</li>
+<li><strong>Full-text search</strong> using SQLite FTS5</li>
+<li><strong>JSON indexes</strong> for structured data queries</li>
+</ul>
+<h3 id="maintenance-tasks">Maintenance Tasks<a class="headerlink" href="#maintenance-tasks" title="Permanent link">&para;</a></h3>
+<pre><code class="language-sql">-- Cleanup expired sessions
+DELETE FROM sessions WHERE expires_at &lt; CURRENT_TIMESTAMP;
+
+-- Update trending scores for topics
+UPDATE topics SET trending_score = (
+  SELECT COUNT(*) * 1.0 / (julianday('now') - julianday(MAX(created_at)) + 1)
+  FROM posts 
+  WHERE hashtags LIKE '%' || topics.name || '%'
+  AND created_at &gt; datetime('now', '-7 days')
+);
+
+-- Vacuum database periodically
+VACUUM;
+ANALYZE;
+</code></pre>
+<p>Ready to integrate? Check out the <a href="../integration-guide/">Integration Guide</a> for practical implementation examples.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "content.code.copy", "search.suggest", "search.highlight", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
