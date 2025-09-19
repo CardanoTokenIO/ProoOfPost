@@ -2,7 +2,7 @@
 
 Join the exclusive presale for the $POST token and be among the first to own a piece of the Proof of Post ecosystem. **Security guaranteed by Orca Labs.**
 
-## ğŸ¯ Presale Overview
+## Ÿ¯ Presale Overview
 
 - **Token Symbol**: $POST
 - **Total Supply**: 1,000,000,000 $POST
@@ -12,13 +12,13 @@ Join the exclusive presale for the $POST token and be among the first to own a p
 - **Presale Address**: `addr1q8xd2trvdsalrlnvmzkuqm97zyzxaulzfcn7xft5ydtfjxnm4n8qyfc5srfl7pfn8ucngtma8xzlxf4rv9k009xy4twq3jpahx`
 
 
-## ğŸ’° Funding Goals
+## Ÿ’° Funding Goals
 
 - **Soft Cap**: 20,000 ADA *(Full refunds if not met)*
 - **Hard Cap**: 195,000 ADA *(Presale ends when reached)*
 - **Security Guarantee**: Presale backed and secured by Orca Labs
 
-## ğŸ“Š Tiered Pricing Structure
+## Ÿ“Š Tiered Pricing Structure
 
 The presale features a multi-tier pricing system with decreasing token allocation rates as funding increases:
 
@@ -61,14 +61,14 @@ The presale features a multi-tier pricing system with decreasing token allocatio
 - **CEX Listings**: 5% (50,000,000 tokens)
 - **Team & Development**: 25% (250,000,000 tokens)
 
-## ğŸš€ Launch Details
+## Ÿš€ Launch Details
 
 - **Launch Price**: 2,300 tokens per ADA *(Higher than final presale tier for instant profit)*
 - **Initial Liquidity**: 200,000,000 tokens (20%) + 86,957 ADA
 - **Profit Potential**: Up to +50% profit from Tier 0 rates at launch
 - **CEX Funding**: 5% of total supply reserved for exchange listings
 
-## ğŸ“ˆ Profit Potential Analysis
+## Ÿ“ˆ Profit Potential Analysis
 
 ![Profit Potential](../images/presale-profit-potential.png)
 
@@ -82,7 +82,7 @@ Based on current tier rates vs launch price (2,300 tokens/ADA):
 
 > **Note**: Earlier tiers offer significantly higher profit potential due to better token rates compared to the launch price.
 
-## ğŸ”— How to Participate
+## Ÿ”— How to Participate
 
 1. **Visit Presale Page**: Access the official presale interface
 2. **Connect Wallet**: Choose from Eternl, Lace, or Vespr
@@ -90,13 +90,13 @@ Based on current tier rates vs launch price (2,300 tokens/ADA):
 4. **Receive Allocation**: Tokens distributed automatically based on current tier
 5. **Track Progress**: Monitor real-time presale progress and tier status
 
-## ğŸ’³ Supported Wallets
+## Ÿ’³ Supported Wallets
 
 - **[Eternl](https://eternl.io/)**: Advanced browser extension with hardware wallet support
 - **[Lace](https://www.lace.io/)**: IOG's official wallet - popular choice
 - **[Vespr](https://vespr.xyz/)**: Mobile-friendly community wallet
 
-## ğŸ›¡ï¸ Security & Compliance
+## Ÿ›¡ï¸ Security & Compliance
 
 ### Security Guarantees
 - **Orca Labs Backed**: Professional security guarantee from established Cardano development company
@@ -110,7 +110,7 @@ Based on current tier rates vs launch price (2,300 tokens/ADA):
 - **Supported Networks**: Cardano Mainnet only
 - **Transaction Records**: Keep your TX hash for potential refund processing
 
-## âš ï¸ Important Information
+## š ï¸ Important Information
 
 ### Investment Risks
 - Cryptocurrency investments carry inherent financial risks
@@ -124,7 +124,7 @@ Based on current tier rates vs launch price (2,300 tokens/ADA):
 - Stable internet connection for wallet operations
 - Basic understanding of Cardano wallet operations
 
-## ğŸ¯ Get Started Now
+## Ÿ¯ Get Started Now
 
 ### Step-by-Step Process
 
@@ -148,7 +148,7 @@ Based on current tier rates vs launch price (2,300 tokens/ADA):
    - Save transaction hash for records
    - Track tier progression in real-time
 
-## ğŸ“ Support & Resources
+## Ÿ“ Support & Resources
 
 ### Official Channels
 - **Website**: [proofofpost.io](https://proofofpost.io/)
@@ -162,7 +162,7 @@ Based on current tier rates vs launch price (2,300 tokens/ADA):
 
 ---
 
-## ğŸš€ **Join the Future of On-Chain Social Media**
+## Ÿš€ **Join the Future of On-Chain Social Media**
 
 The $POST presale represents your opportunity to be part of the next evolution in social media - where creators own their content, earn directly from their audience, and participate in a truly decentralized platform built on Cardano.
 

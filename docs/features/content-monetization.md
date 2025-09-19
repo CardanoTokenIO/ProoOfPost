@@ -2,7 +2,7 @@
 
 Proof of Post revolutionizes creator monetization by enabling direct payments between users without platform fees or intermediaries. Creators can earn from their content through multiple mechanisms, all powered by Cardano's blockchain.
 
-## ğŸ’ Paid Media System
+## Ÿ’ Paid Media System
 
 ### How It Works
 Creators can monetize images and videos by setting custom prices in ADA:
@@ -42,7 +42,7 @@ const createPaidPost = async (content: string, mediaFile: File, priceAda: number
 };
 ```
 
-## ğŸ¯ Tipping System
+## Ÿ¯ Tipping System
 
 ### Direct Creator Support
 Users can tip creators with ADA or other Cardano tokens:
@@ -67,7 +67,7 @@ Users can tip creators with ADA or other Cardano tokens:
 - **Performance Metrics**: Correlation between content quality and tips
 - **Payout History**: Complete record of all earnings
 
-## ğŸ’° Revenue Streams
+## Ÿ’° Revenue Streams
 
 ### Multiple Monetization Methods
 
@@ -89,7 +89,7 @@ Users can tip creators with ADA or other Cardano tokens:
 - **Community Perks**: Special access for community members
 - **VIP Content**: Premium content for top supporters
 
-## ğŸ“Š Creator Dashboard
+## Ÿ“Š Creator Dashboard
 
 ### Earnings Overview
 - **Total Earnings**: Lifetime earnings across all revenue streams
@@ -112,7 +112,7 @@ Users can tip creators with ADA or other Cardano tokens:
 - **Optimal Pricing**: Data-driven pricing recommendations
 - **Revenue Forecasting**: Projected earnings based on trends
 
-## ğŸ›¡ï¸ Payment Security
+## Ÿ›¡ï¸ Payment Security
 
 ### Blockchain Verification
 - **On-Chain Payments**: All payments verified on Cardano blockchain
@@ -135,7 +135,7 @@ Users can tip creators with ADA or other Cardano tokens:
 - **GDPR Compliance**: European privacy regulation compliance
 - **Selective Disclosure**: Choose what to share publicly
 
-## ğŸ¨ Creator Tools
+## Ÿ¨ Creator Tools
 
 ### Content Management
 - **Pricing Tools**: Easy price setting for paid content
@@ -158,7 +158,7 @@ Users can tip creators with ADA or other Cardano tokens:
 - **Email Integration**: Notify subscribers of new paid content
 - **Analytics Integration**: Track marketing campaign effectiveness
 
-## ğŸ“ˆ Success Strategies
+## Ÿ“ˆ Success Strategies
 
 ### Pricing Optimization
 - **Market Research**: Analyze similar creator pricing

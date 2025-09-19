@@ -16,22 +16,22 @@ The **$POST** token is the native utility token of the **Utxo Maestro Protocol**
 
 The $POST token provides multiple utilities within the Utxo Maestro ecosystem:
 
-### ğŸ° Platform Access
+### Ÿ° Platform Access
 - Access to premium platform features
 - Exclusive content and functionality
 - Enhanced social media capabilities
 
-### ğŸ›ï¸ Governance Rights
+### Ÿ›ï¸ Governance Rights
 - Vote on protocol upgrades and changes
 - Participate in treasury decisions
 - Propose new features and improvements
 
-### ğŸ’° Staking & Rewards
+### Ÿ’° Staking & Rewards
 - Stake tokens to earn passive rewards
 - Participate in network security
 - Access to exclusive staking pools
 
-### ğŸ’¸ Fee Discounts
+### Ÿ’¸ Fee Discounts
 - Reduced transaction fees across the platform
 - Priority processing for token holders
 - Exclusive access to new features
@@ -40,17 +40,17 @@ The $POST token provides multiple utilities within the Utxo Maestro ecosystem:
 
 The $POST token is designed with deflationary mechanisms to create sustainable value:
 
-### ğŸ”¥ Token Burns
+### Ÿ”¥ Token Burns
 - **Platform Revenue**: Percentage of platform profits burned regularly
 - **Transaction Fees**: Platform fees contribute to burn mechanism  
 - **Buyback Program**: Automated market purchases and burns
 
-### ğŸ“ˆ Revenue Sharing
+### Ÿ“ˆ Revenue Sharing
 - Holders benefit from platform success
 - Multiple revenue streams feed back to token value
 - Sustainable long-term growth model
 
-### ğŸ”’ Supply Control
+### Ÿ”’ Supply Control
 - Limited total supply with deflationary pressure
 - Vesting schedules prevent sudden supply shocks
 - Community-controlled emission rates

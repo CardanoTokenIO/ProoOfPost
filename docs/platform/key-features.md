@@ -2,7 +2,7 @@
 
 Proof of Post combines the best of traditional social media with cutting-edge blockchain technology. Here are the platform's core capabilities:
 
-## 🔐 Wallet-Based Authentication
+## Wallet-Based Authentication
 
 ### Multi-Wallet Support
 - **Eternl, Lace, Vespr** - Connect with your preferred Cardano wallet
@@ -17,7 +17,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **Automatic detection** of ADA handles when connecting wallets
 - **Profile flexibility** - URLs work with username, handle, or wallet address
 
-## 📱 Social Media Features
+## Social Media Features
 
 ### Content Creation
 - **Text Posts** with 280 character limit
@@ -47,7 +47,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **Topic-Based Filtering** for focused discussions
 - **Token-Specific Feeds** for posts mentioning specific assets
 
-## 💰 Cardano Integration
+## Cardano Integration
 
 ### Native Crypto Features
 - **Balance Display** showing your ADA holdings
@@ -64,7 +64,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **Watchlist Functionality** for following your favorite tokens
 - **Automatic Token Linking** when mentioned in posts
 
-## 💎 Content Monetization
+## Content Monetization
 
 ### Paid Media System
 - **Monetize Images/Videos** - Set custom prices in ADA
@@ -79,7 +79,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **Token-Gated Content** possibilities
 - **Cryptographic Ownership** proof for all content
 
-## 🛡️ Security & Verification
+## Security & Verification
 
 ### Cryptographic Security
 - **CIP-8 Message Signing** for post authenticity
@@ -93,7 +93,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **ADA Handle Verification** for confirmed on-chain identities
 - **Wallet Ownership Proof** preventing fake accounts
 
-## 🎨 User Experience
+## ��� User Experience
 
 ### Modern Interface
 - **Dark/Light Theme** support for user preference
@@ -110,7 +110,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **Prefetching** with Next.js for seamless navigation
 - **Transform-Only Animations** to avoid layout shifts
 
-## 🌐 Decentralized Storage
+## Decentralized Storage
 
 ### IPFS Integration
 - **Decentralized Media Storage** - Your content isn't locked to our servers
@@ -118,7 +118,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **Automatic Upload** with local previews during processing
 - **Gateway URL Generation** for reliable content delivery
 
-## 📊 Analytics & Insights
+## Analytics & Insights
 
 ### User Metrics
 - **Follower/Following Counts** for social proof

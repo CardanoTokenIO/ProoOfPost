@@ -2,7 +2,7 @@
 
 Learn how to earn ADA and other tokens directly from your content on Proof of Post, with no platform fees or intermediaries.
 
-## ðŸ’Ž Paid Media System
+## Ÿ’Ž Paid Media System
 
 ### Setting Up Paid Content
 1. **Create post** with image or video
@@ -24,7 +24,7 @@ Learn how to earn ADA and other tokens directly from your content on Proof of Po
 - **Content unlocked** with full resolution
 - **ADA sent directly** to your wallet
 
-## ðŸŽ¯ Tipping System
+## ŸŽ¯ Tipping System
 
 ### Receiving Tips
 - **Automatic tip buttons** appear on all posts
@@ -39,7 +39,7 @@ Learn how to earn ADA and other tokens directly from your content on Proof of Po
 - **Consistent posting**: Regular content keeps audience engaged
 - **Respond to supporters**: Thank tippers to build loyalty
 
-## ðŸ“Š Earnings Tracking
+## Ÿ“Š Earnings Tracking
 
 ### Revenue Analytics
 - **Total earnings**: Lifetime income from all sources
@@ -54,7 +54,7 @@ Learn how to earn ADA and other tokens directly from your content on Proof of Po
 - **USD conversion**: Track fiat value for tax reporting
 - **Professional advice**: Consult tax professionals for compliance
 
-## ðŸš€ Success Strategies
+## Ÿš€ Success Strategies
 
 ### Content Quality
 - **High-resolution images**: Professional quality attracts more buyers

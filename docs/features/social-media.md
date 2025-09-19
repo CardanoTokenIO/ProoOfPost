@@ -2,7 +2,7 @@
 
 Proof of Post provides a comprehensive social media experience that rivals traditional platforms while adding the benefits of blockchain integration. Here's everything you can do:
 
-## ğŸ“ Content Creation
+## Ÿ“ Content Creation
 
 ### Rich Post Composer
 The platform features a sophisticated composer that supports multiple content types:
@@ -24,7 +24,7 @@ The platform features a sophisticated composer that supports multiple content ty
 - **User Mentions**: Tag `@username` or `$handle` to notify other users
 - **URL Embedding**: Automatic preview generation for shared links
 
-## ğŸ’¬ Social Interactions
+## Ÿ’¬ Social Interactions
 
 ### Reaction System
 Express yourself with multiple reaction types:
@@ -48,7 +48,7 @@ Express yourself with multiple reaction types:
 - **Mutual Connections**: Discover users through your network
 - **Profile Badges**: Verification indicators for notable accounts
 
-## ğŸ” Discovery & Navigation
+## Ÿ” Discovery & Navigation
 
 ### Feed Experience
 - **Home Feed**: Personalized timeline from users you follow
@@ -84,7 +84,7 @@ Comprehensive search across all platform content:
 - **Topic Following**: Subscribe to hashtag-based feeds
 - **Hot Topics Widget**: Discover what's trending now
 
-## ğŸ“Š Content Analytics
+## Ÿ“Š Content Analytics
 
 ### Post Performance
 - **Reaction Counts**: See total engagement for each reaction type
@@ -98,7 +98,7 @@ Comprehensive search across all platform content:
 - **Top Posts**: Identify your most successful content
 - **Engagement Rate**: Measure audience interaction levels
 
-## ğŸ¨ Customization Options
+## Ÿ¨ Customization Options
 
 ### Display Preferences
 - **Dark/Light Mode**: Choose your preferred theme
@@ -112,7 +112,7 @@ Comprehensive search across all platform content:
 - **Language Preferences**: Filter by post language
 - **Quality Filters**: Hide low-engagement content
 
-## ğŸ”” Notifications
+## Ÿ”” Notifications
 
 ### Real-time Alerts
 - **Mentions**: When someone tags you in a post or comment
@@ -127,7 +127,7 @@ Comprehensive search across all platform content:
 - **In-app Notifications**: Real-time activity feed
 - **Granular Controls**: Choose what alerts you receive
 
-## ğŸ’¡ Advanced Features
+## Ÿ’¡ Advanced Features
 
 ### Thread Creation
 - **Reply Chains**: Create long-form content through connected posts
