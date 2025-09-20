@@ -14,9 +14,7 @@ fig, ax = plt.subplots(figsize=(10, 8))
 wedges, texts, autotexts = ax.pie(sizes, colors=colors, autopct='',
                                   startangle=90, wedgeprops=dict(width=0.3))
 
-# Add a title
-plt.title('PoP Network Revenue Distribution', 
-          fontsize=18, fontweight='bold', pad=30, color='#374151')
+# No title - clean design
 
 # Make the chart circular
 ax.axis('equal')
