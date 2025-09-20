@@ -3,8 +3,8 @@ import numpy as np
 from matplotlib.patches import Circle
 
 # Data for the tokenomics chart
-labels = ['Presale', 'Pool', 'Top 50 $NADO Holders Airdrop', 'Early Users Rewards', 'Team Vesting (3 months)', 'Liquid Staking Rewards (6 months)']
-sizes = [50, 20, 10, 5, 10, 5]
+labels = ['Presale', 'LP Pool', 'Top 50 $NADO Holders Airdrop', 'Early Users Rewards', 'Treasury Vesting (3 months)', 'Liquid Staking Rewards (6 months)']
+sizes = [50, 20, 10, 2.5, 10, 7.5]
 colors = ['#7C3AED', '#8B5CF6', '#A78BFA', '#C4B5FD', '#DDD6FE', '#F59E0B']
 
 # Create figure and axis
