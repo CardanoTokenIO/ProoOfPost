@@ -43,7 +43,6 @@ Complete guide to connecting and managing your Cardano wallet on Proof of Post, 
 - **Tipping**: Send ADA/tokens to creators
 - **Paid content**: Purchase access to monetized media
 - **Transaction history**: View all platform-related transactions
-- **Gas fee estimation**: See transaction costs before signing
 
 ## 🔧 Troubleshooting
 
