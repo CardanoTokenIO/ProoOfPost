@@ -2,6 +2,10 @@
 
 Proof of Post seamlessly integrates Cardano's rich token ecosystem, making it easy to discover, discuss, and interact with tokens directly within the social media experience.
 
+---
+**Disclaimer**: All features and functionalities described in this documentation are subject to change during development. The final implementation may differ from what is described here.
+---
+
 ## Token Discovery
 
 ### Comprehensive Token Database
