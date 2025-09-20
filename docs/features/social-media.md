@@ -7,8 +7,8 @@ Proof of Post delivers a familiar yet enhanced social media experience, combinin
 ### Post Types
 - **Text Posts** - Share thoughts, updates, and insights
 - **Media Posts** - Upload images and videos to IPFS
-- **Poll Posts** - Create community polls with blockchain voting
-- **Thread Posts** - Long-form content split across connected posts
+- **Poll Posts** - Create community polls with blockchain voting *(Coming Soon)*
+- **Thread Posts** - Long-form content split across connected posts *(Coming Soon)*
 - **Quote Posts** - Share others' content with your commentary
 
 ### Rich Text Features
@@ -17,6 +17,7 @@ Proof of Post delivers a familiar yet enhanced social media experience, combinin
 - **User Mentions** with notification system
 - **Token Mentions** with automatic price data
 - **URL Preview** with metadata extraction
+- **Draft System** to save work in progress *(Coming Soon)*
 
 ### Media Handling
 - **IPFS Storage** for decentralized media hosting
@@ -25,10 +26,6 @@ Proof of Post delivers a familiar yet enhanced social media experience, combinin
 - **Alt Text Support** for accessibility
 - **Media Galleries** for multiple files per post
 
-### Coming Soon Features
-- **Poll Creation** with blockchain-verified voting *(Coming Soon)*
-- **Thread Support** for longer-form content *(Coming Soon)*
-- **Draft System** to save work in progress *(Coming Soon)*
 
 ## Discovery & Navigation
 
