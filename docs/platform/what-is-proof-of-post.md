@@ -13,6 +13,8 @@ Proof of Post represents the evolution of social media, where users can:
 - **Maintain cryptographic proof** of their posts and interactions
 - **Participate in a decentralized social economy** built on Cardano
 
+![The Future of Social Media](../images/social-media-future.png){: style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto"}
+
 ## Core Concept
 
 Unlike traditional social media platforms that rely on centralized servers and advertising models, Proof of Post leverages the Cardano blockchain to create a truly decentralized social experience where:
