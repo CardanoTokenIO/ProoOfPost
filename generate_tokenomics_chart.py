@@ -41,12 +41,19 @@ ax.text(0, -0.1, 'TOKENOMICS', fontsize=12, fontweight='bold', ha='center', va='
 
 # Adjust layout and save
 plt.tight_layout()
+
+# Save regular version with white background
 plt.savefig('docs/images/post-tokenomics-distribution.png', dpi=300, bbox_inches='tight', 
             facecolor='white', edgecolor='none')
 plt.savefig('docs/images/post-tokenomics-distribution.jpg', dpi=300, bbox_inches='tight', 
             facecolor='white', edgecolor='none')
 
-print("Tokenomics chart generated successfully!")
+# Save transparent version
+plt.savefig('docs/images/post-tokenomics-distribution-transparent.png', dpi=300, bbox_inches='tight', 
+            facecolor='none', edgecolor='none', transparent=True)
+
+print("Tokenomics charts generated successfully!")
 print("Files created:")
-print("- docs/images/post-tokenomics-distribution.png")
-print("- docs/images/post-tokenomics-distribution.jpg")
+print("- docs/images/post-tokenomics-distribution.png (white background)")
+print("- docs/images/post-tokenomics-distribution.jpg (white background)")
+print("- docs/images/post-tokenomics-distribution-transparent.png (transparent)")
