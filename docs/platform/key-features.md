@@ -44,16 +44,16 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 ### Token Support
 - **Multi-Token Tipping** - Support for ADA and native tokens
 - **Token Mentions** with automatic linking and price data
-- **Portfolio Integration** showing token holdings
-- **Price Alerts** for followed tokens
+- **Portfolio Integration** showing token holdings *(Coming Soon)*
+- **Price Alerts** for followed tokens *(Coming Soon)*
 - **Trading Integration** with DEX protocols
 
 ## Content Monetization
 
 ### Paid Media System
 - **Paid Posts** with preview and full content access
-- **Subscription Tiers** for ongoing creator support
-- **Digital Downloads** for exclusive content
+- **Subscription Tiers** for ongoing creator support *(Coming Soon)*
+- **Digital Downloads** for exclusive content *(Coming Soon)*
 - **Revenue Sharing** with platform sustainability model
 - **Cryptographic Ownership** proof for all content
 
