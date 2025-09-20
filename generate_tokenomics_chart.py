@@ -5,7 +5,7 @@ from matplotlib.patches import Circle
 # Data for the tokenomics chart
 labels = ['Presale', 'Pool', 'Top 50 $NADO Holders Airdrop', 'Early Users Rewards', 'Team Vesting (3 months)', 'Liquid Staking Rewards (6 months)']
 sizes = [50, 20, 10, 5, 10, 5]
-colors = ['#8B5CF6', '#A78BFA', '#C4B5FD', '#DDD6FE', '#EDE9FE', '#F3F4F6']
+colors = ['#7C3AED', '#8B5CF6', '#A78BFA', '#C4B5FD', '#DDD6FE', '#F59E0B']
 
 # Create figure and axis
 fig, ax = plt.subplots(figsize=(12, 8))
