@@ -16,6 +16,16 @@ The **$POST** token is the native utility token of the **Proof of Post Protocol*
 
 The $POST tokens grants you revenue sharing in the Proof Of Post network equivalently to owning equity in a business. The revenue that the PoP network is making will be distributed to the token holders of $POST.
 
+## Revenue Sources
+
+The PoP network generates revenue through multiple streams:
+
+- **Swap trading fees** from DexHunter embed on the APP
+- **Advertisement fees** 
+- **Verification badge fees**
+- **Paid content tax**
+- **Promoted posts**
+
 ---
 
 *The $POST token represents ownership in the future of decentralized social media on Cardano. Join us in building the next generation of blockchain applications.*
