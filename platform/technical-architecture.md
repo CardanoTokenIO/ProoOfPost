@@ -24,7 +24,6 @@ Proof of Post is built on a modern, scalable architecture that seamlessly integr
 - **CIP-8 Message Signing** for cryptographic verification
 
 
-## 🗄️ Database Architecture
 
 ### Core Tables Schema
 
