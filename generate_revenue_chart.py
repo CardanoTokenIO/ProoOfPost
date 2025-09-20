@@ -30,19 +30,39 @@ ax.text(0, 0.15, 'REVENUE', fontsize=24, fontweight='bold', ha='center', va='cen
 ax.text(0, 0, 'SHARING', fontsize=16, fontweight='bold', ha='center', va='center', color='#6B7280')
 ax.text(0, -0.15, '90% / 10%', fontsize=14, fontweight='bold', ha='center', va='center', color='#374151')
 
-# Add clean external labels
-ax.text(0.6, 0.3, '$POST Token Holders\n90%', fontsize=14, fontweight='bold', 
+# Calculate the center angles for each section
+# Purple section (90%) starts at 90 degrees, covers 324 degrees (90% of 360)
+purple_center_angle = 90 + (324/2)  # Center of purple section
+orange_center_angle = 90 - (36/2)   # Center of orange section (10% = 36 degrees)
+
+# Convert to radians and calculate positions
+purple_angle_rad = np.radians(purple_center_angle)
+orange_angle_rad = np.radians(orange_center_angle)
+
+# Position labels at 1.3 radius from center, directly above their sections
+purple_x = 1.3 * np.cos(purple_angle_rad)
+purple_y = 1.3 * np.sin(purple_angle_rad)
+orange_x = 1.3 * np.cos(orange_angle_rad)
+orange_y = 1.3 * np.sin(orange_angle_rad)
+
+# Add labels positioned correctly over their colors
+ax.text(purple_x, purple_y, '$POST Token Holders\n90%', fontsize=14, fontweight='bold', 
         ha='center', va='center', color='#7C3AED', 
         bbox=dict(boxstyle="round,pad=0.3", facecolor='white', edgecolor='#7C3AED', linewidth=2))
 
-ax.text(-0.6, -0.3, 'Team Maintenance\n10%', fontsize=14, fontweight='bold', 
+ax.text(orange_x, orange_y, 'Team Maintenance\n10%', fontsize=14, fontweight='bold', 
         ha='center', va='center', color='#F59E0B',
         bbox=dict(boxstyle="round,pad=0.3", facecolor='white', edgecolor='#F59E0B', linewidth=2))
 
-# Add connecting lines
-ax.annotate('', xy=(0.35, 0.15), xytext=(0.5, 0.25),
+# Add connecting lines from chart edge to labels
+purple_edge_x = 1.0 * np.cos(purple_angle_rad)
+purple_edge_y = 1.0 * np.sin(purple_angle_rad)
+orange_edge_x = 1.0 * np.cos(orange_angle_rad)
+orange_edge_y = 1.0 * np.sin(orange_angle_rad)
+
+ax.annotate('', xy=(purple_edge_x, purple_edge_y), xytext=(purple_x*0.9, purple_y*0.9),
             arrowprops=dict(arrowstyle='-', color='#7C3AED', lw=2))
-ax.annotate('', xy=(-0.35, -0.15), xytext=(-0.5, -0.25),
+ax.annotate('', xy=(orange_edge_x, orange_edge_y), xytext=(orange_x*0.9, orange_y*0.9),
             arrowprops=dict(arrowstyle='-', color='#F59E0B', lw=2))
 
 # Adjust layout and save
