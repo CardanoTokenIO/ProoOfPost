@@ -18,5 +18,3 @@
 - **Fully Decentralized** - Content stored on IPFS, identities on Cardano, no central authority
 
 Proof of Post combines the familiar social media experience you love with the security, ownership, and financial opportunities of the Cardano blockchain. It's not just social media - it's the future of decentralized social interaction.
-
-![The Future of Social Media](images/social-media-future.png){: style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto"}
