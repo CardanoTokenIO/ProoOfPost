@@ -30,8 +30,8 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **Rich Reactions**: Like, Rocket, Diamond, Degen
 - **Retweets/Boosts** with optional commentary
 - **Comments and Replies** on all posts
-- **Direct Messages** between users
-- **Follow System** with notification preferences
+- **Direct Messages** between users *(Coming Soon)*
+- **Follow System** with notification preferences *(Coming Soon)*
 
 ## Cardano Integration
 
