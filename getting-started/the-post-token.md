@@ -2,7 +2,7 @@
 
 # The $POST Token
 
-The **$POST** token is the native utility token of the **Utxo Maestro Protocol**, designed to power a revolutionary ecosystem on Cardano. Built with innovative tokenomics and value-accrual mechanisms, $POST serves as the cornerstone of our decentralized platform.
+The **$POST** token is the native utility token of the **Proof of Post Protocol**, designed to power a revolutionary ecosystem on Cardano. Built with innovative tokenomics and value-accrual mechanisms, $POST serves as the cornerstone of our decentralized platform.
 
 ## Token Overview
 
@@ -14,7 +14,7 @@ The **$POST** token is the native utility token of the **Utxo Maestro Protocol**
 
 ## Core Utility
 
-The $POST token provides multiple utilities within the Utxo Maestro ecosystem:
+The $POST token provides multiple utilities within the Proof of Post ecosystem:
 
 ### 🎰 Platform Access
 - Access to premium platform features
@@ -57,7 +57,7 @@ The $POST token is designed with deflationary mechanisms to create sustainable v
 
 ## Getting Started
 
-Ready to join the Utxo Maestro ecosystem?
+Ready to join the Proof of Post ecosystem?
 
 1. **Participate in Presale**: Get early access to $POST tokens
 2. **Join Community**: Connect with other holders and builders  
