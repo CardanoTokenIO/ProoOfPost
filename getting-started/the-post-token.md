@@ -66,4 +66,4 @@ Ready to join the Proof of Post ecosystem?
 
 ---
 
-*The $POST token represents ownership in the future of decentralized finance on Cardano. Join us in building the next generation of blockchain applications.*
+*The $POST token represents ownership in the future of decentralized social media on Cardano. Join us in building the next generation of blockchain applications.*
