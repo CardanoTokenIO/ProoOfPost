@@ -5,7 +5,7 @@
   </div>
 </div>
 
-## Welcome to Proof of Post
+## Introduction
 
 **Proof of Post** is a **Cardano-native social media platform** - essentially a Twitter-like decentralized social network built specifically for the Cardano ecosystem. It's a comprehensive social platform that combines traditional social media features with advanced blockchain integration and cryptocurrency functionality.
 
