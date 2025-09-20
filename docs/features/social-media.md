@@ -25,6 +25,11 @@ Proof of Post delivers a familiar yet enhanced social media experience, combinin
 - **Alt Text Support** for accessibility
 - **Media Galleries** for multiple files per post
 
+### Coming Soon Features
+- **Poll Creation** with blockchain-verified voting
+- **Thread Support** for longer-form content
+- **Draft System** to save work in progress
+
 ## Discovery & Navigation
 
 ### Feed Algorithm
