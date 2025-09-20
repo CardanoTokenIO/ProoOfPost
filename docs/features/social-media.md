@@ -26,9 +26,9 @@ Proof of Post delivers a familiar yet enhanced social media experience, combinin
 - **Media Galleries** for multiple files per post
 
 ### Coming Soon Features
-- **Poll Creation** with blockchain-verified voting
-- **Thread Support** for longer-form content
-- **Draft System** to save work in progress
+- **Poll Creation** with blockchain-verified voting *(Coming Soon)*
+- **Thread Support** for longer-form content *(Coming Soon)*
+- **Draft System** to save work in progress *(Coming Soon)*
 
 ## Discovery & Navigation
 
