@@ -26,6 +26,18 @@ The PoP network generates revenue through multiple streams:
 - **Paid content tax**
 - **Promoted posts**
 
+## Token Distribution
+
+![POST Token Distribution](../images/post-tokenomics-distribution.png){: style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto"}
+
+### Distribution Breakdown:
+- **Presale**: 50% - Early access for initial supporters
+- **Pool**: 20% - Liquidity and ecosystem development  
+- **Top 50 $NADO Holders Airdrop**: 10% - Community rewards
+- **Early Users Rewards**: 5% - Incentives for platform adoption
+- **Team Vesting**: 10% - 3-month vesting schedule
+- **Liquid Staking Rewards**: 5% - 6-month reward program
+
 ---
 
 *The $POST token represents ownership in the future of decentralized social media on Cardano. Join us in building the next generation of blockchain applications.*
