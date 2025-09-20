@@ -25,7 +25,7 @@ Unlike traditional social media platforms that rely on centralized servers and a
 Users authenticate using their Cardano wallets, with support for ADA handles as verified on-chain identities. This eliminates the need for traditional username/password systems and provides cryptographic proof of identity.
 
 ### Content Ownership
-All posts are cryptographically signed, providing immutable proof of authorship. Content is stored on IPFS for decentralized access, ensuring your data isn't locked into any single platform.
+All posts are cryptographically signed, providing immutable proof of authorship.
 
 ### Economic Integration
 The platform natively supports Cardano's token ecosystem, allowing users to tip creators, monetize content, and interact with DeFi protocols directly within their social experience.
