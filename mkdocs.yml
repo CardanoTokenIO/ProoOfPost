@@ -47,7 +47,7 @@ markdown_extensions:
 
 # Build navigation based on existing SUMMARY.md structure
 nav:
-  - Home: README.md
+  - Introduction: README.md
   - Platform Overview:
     - What is Proof of Post?: platform/what-is-proof-of-post.md
     - Key Features: platform/key-features.md
