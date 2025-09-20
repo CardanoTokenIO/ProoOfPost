@@ -26,10 +26,6 @@ The $POST token provides multiple utilities within the Proof of Post ecosystem:
 - Participate in treasury decisions
 - Propose new features and improvements
 
-### 💰 Staking & Rewards
-- Stake tokens to earn passive rewards
-- Participate in network security
-- Access to exclusive staking pools
 
 ### 💸 Fee Discounts
 - Reduced transaction fees across the platform
@@ -61,7 +57,7 @@ Ready to join the Proof of Post ecosystem?
 
 1. **Participate in Presale**: Get early access to $POST tokens
 2. **Join Community**: Connect with other holders and builders  
-3. **Stake Tokens**: Start earning rewards immediately
+3. **Hold Tokens**: Participate in the ecosystem
 4. **Use Platform**: Experience the full ecosystem
 
 ---
