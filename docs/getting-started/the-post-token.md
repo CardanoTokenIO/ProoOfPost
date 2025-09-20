@@ -1,4 +1,4 @@
-<img src="../images/utxo-maestro-logo.jpg" alt="POST Token" width="40" height="40" align="right">
+![POST Token Logo](../images/post-token-logo.png){: style="width: 80px; height: 80px; display: block; margin: 0 auto 20px auto"}
 
 # The $POST Token
 
