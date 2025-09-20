@@ -22,9 +22,9 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 ### Content Creation
 - **Text Posts** with rich formatting and hashtag support
 - **Media Uploads** with IPFS storage for permanence
-- **Poll Creation** with blockchain-verified voting
-- **Thread Support** for longer-form content
-- **Draft System** to save work in progress
+- **Poll Creation** with blockchain-verified voting *(Coming Soon)*
+- **Thread Support** for longer-form content *(Coming Soon)*
+- **Draft System** to save work in progress *(Coming Soon)*
 
 ### Social Interactions
 - **Rich Reactions**: Like, Rocket, Diamond, Degen
