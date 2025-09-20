@@ -23,31 +23,6 @@ Proof of Post is built on a modern, scalable architecture that seamlessly integr
 - **Blockfrost API** for Cardano network data
 - **CIP-8 Message Signing** for cryptographic verification
 
-## Performance Optimizations
-
-### Virtualized Rendering
-```typescript
-// 60fps scrolling with react-virtuoso
-<Virtuoso
-  data={posts}
-  itemContent={(index, post) => <PostCard post={post} />}
-  overscan={5}
-  increaseViewportBy={1000}
-/>
-```
-
-### Optimistic Updates
-- **Instant UI feedback** before blockchain confirmation
-- **Rollback mechanisms** for failed transactions
-- **Loading states** with skeleton components
-- **Error boundaries** for graceful failure handling
-
-### Caching Strategy
-- **Feed caching** with 5-minute TTL
-- **User profile caching** with 15-minute TTL
-- **Token data caching** with 10-minute TTL
-- **Image caching** through IPFS gateways
-
 ## Database Architecture
 
 ### Core Tables Schema
