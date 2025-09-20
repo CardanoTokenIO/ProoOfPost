@@ -1,0 +1,21 @@
+/* Custom CSS for Proof of Post Docs */
+
+/* Make the logo bigger */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 2.5rem !important;
+    width: auto !important;
+}
+
+.md-header__button.md-logo {
+    margin: 0.2rem 0.4rem !important;
+}
+
+/* Adjust header height to accommodate larger logo */
+.md-header {
+    height: 3.5rem !important;
+}
+
+.md-header__inner {
+    height: 3.5rem !important;
+}

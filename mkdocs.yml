@@ -72,3 +72,6 @@ nav:
 
 extra:
   generator: false
+
+extra_css:
+  - stylesheets/custom.css
