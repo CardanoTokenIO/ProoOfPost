@@ -21,16 +21,16 @@ Proof of Post represents the evolution of social media, where users can:
 
 Unlike traditional social media platforms that rely on centralized servers and advertising models, Proof of Post leverages the Cardano blockchain to create a truly decentralized social experience where:
 
-### Decentralized Identity**
+### Decentralized Identity
 Users authenticate using their Cardano wallets, with support for ADA handles as verified on-chain identities. This eliminates the need for traditional username/password systems and provides cryptographic proof of identity.
 
-### Content Ownership**
+### Content Ownership
 All posts are cryptographically signed, providing immutable proof of authorship. Content is stored on IPFS for decentralized access, ensuring your data isn't locked into any single platform.
 
-### Economic Integration**
+### Economic Integration
 The platform natively supports Cardano's token ecosystem, allowing users to tip creators, monetize content, and interact with DeFi protocols directly within their social experience.
 
-### Cryptographic Security**
+### Cryptographic Security
 Every post can be cryptographically verified, preventing impersonation and ensuring the integrity of content and interactions.
 
 ## Target Audience
