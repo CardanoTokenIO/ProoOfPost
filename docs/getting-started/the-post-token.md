@@ -26,6 +26,14 @@ The PoP network generates revenue through multiple streams:
 - **Paid content tax**
 - **Promoted posts**
 
+## Revenue Distribution
+
+![PoP Revenue Distribution](../images/post-revenue-distribution.png){: style="width: 100%; max-width: 500px; height: auto; display: block; margin: 20px auto"}
+
+### Revenue Allocation:
+- **$POST Token Holders**: 90% - Revenue sharing for token holders
+- **Team Maintenance**: 10% - Platform development and operations
+
 ## Token Distribution
 
 ![POST Token Distribution](../images/post-tokenomics-distribution.png){: style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto"}
