@@ -38,9 +38,8 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 ### Native Blockchain Features
 - **On-chain Identity** verification through ADA handles
 - **Token Integration** with automatic price feeds
-- **Transaction History** linked to social activity
-- **Wallet Balance** display and verification
-- **Smart Contract** interaction for advanced features
+- **Transaction History** linked to social activity *(Coming Soon)*
+- **Wallet Balance** display and verification *(Coming Soon)*
 
 ### Token Support
 - **Multi-Token Tipping** - Support for ADA and native tokens
