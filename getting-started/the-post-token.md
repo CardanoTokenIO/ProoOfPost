@@ -9,7 +9,7 @@ The **$POST** token is the native utility token of the **Proof of Post Protocol*
 - **Name**: POST Token  
 - **Symbol**: $POST
 - **Blockchain**: Cardano
-- **Total Supply**: [Total Supply]
+- **Total Supply**: 1 billion
 - **Launch**: [Launch Date]
 
 ## Core Utility
