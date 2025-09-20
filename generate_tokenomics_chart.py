@@ -25,7 +25,7 @@ plt.title('POST Token Distribution\nTotal Supply: 1 Billion Tokens',
           fontsize=16, fontweight='bold', pad=20, color='#374151')
 
 # Add a subtitle with vesting details
-fig.text(0.5, 0.02, 'Vesting Schedule: Early Users (1 month) • Team (3 months) • Liquid Staking (6 months)', 
+fig.text(0.5, 0.02, 'Vesting Schedule: Early Users (1 month) • Treasury (3 months) • Liquid Staking (6 months)', 
          ha='center', fontsize=10, style='italic', color='#6B7280')
 
 # Make the chart circular
