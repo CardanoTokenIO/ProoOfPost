@@ -79,7 +79,7 @@ Proof of Post combines the best of traditional social media with cutting-edge bl
 - **Automatic Upload** with local previews during processing
 - **Gateway URL Generation** for reliable content delivery
 
-## Analytics & Insights
+## Analytics & Insights *(Coming Soon)*
 
 ### User Metrics
 - **Follower/Following Counts** for social proof
